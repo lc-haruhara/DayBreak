@@ -1,0 +1,55 @@
+@use "foundation/index" as *;
+
+// ローディング中一瞬ページが見えてしまう対策 ※編集禁止 -----------------------------
+.l-main-root-wrap {
+  opacity: 1;
+
+  &.is-loading {
+    opacity: 0;
+  }
+}
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+//	🍔 基本的なスタイル
+//	※最低限のスタイルしかあてていません。編集必須です。
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100vh;
+  -webkit-overscroll-behavior: none;
+  overscroll-behavior: none;
+  scrollbar-width: none; // FireFox用
+  background: #fff;
+  transition: 0.5s ease;
+  -ms-overflow-style: none; // IE,edge用
+  @include Flex(center, center);
+
+  &::-webkit-scrollbar {
+    // Chrome,Safari用
+    display: none;
+  }
+
+  &-inner {
+    width: min(280px, 100%);
+    margin: auto;
+    translate: 0 -25%;
+    //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    // 🍟 Mobileは出現位置を調整
+    //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  }
+}
+
+// :::::::::::::::::::::::::::::::::::::::::::::
+//	✅ ローディング完了後のスタイル
+//  ※ opacity で非表示にする等。
+// :::::::::::::::::::::::::::::::::::::::::::::
+.c-loading.is-loaded {
+  pointer-events: none;
+  opacity: 0;
+}

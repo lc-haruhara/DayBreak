@@ -1,0 +1,131 @@
+@use "sass:map";
+@use "variable" as *;
+@use "color" as *;
+@use "mixins" as *;
+
+// 💬 Description.........................................
+//
+// Font設定をするscss
+//
+// ............................................................
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Import
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// フォントの CDN 読み込みは header（functions/config/fonts.config.php）で
+// 一元管理・自動生成する。ここでの @import は行わない。
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 BaseFontSize
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@mixin BaseFontSize {
+  font-size: 16px;
+
+  @include Breakpoint(inch15) {
+  }
+
+  @include Breakpoint(inch13) {
+  }
+
+  @include Breakpoint(inch11) {
+  }
+
+  @include Breakpoint(inch7) {
+  }
+
+  @include Breakpoint(mobile) {
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 FontFamily
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// 管理画面 UI（_dashboard/admin-ui/_layout.scss）が参照するため残す。
+// フロント側のフォントスタックは fonts.config.php に一本化しているため、
+// この変数はフロントの font-family には使用しない。
+$font-fallback-ja:
+  "Noto Sans JP", "dashicons", "ヒラギノ角ゴ Pro W3",
+  "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+
+// フロントの font-family は header 出力の CSS変数（--ff-*）を単一ソースとして参照する。
+// 変数の実体（フォント名・順序）は functions/config/fonts.config.php で定義。
+// 第2引数の sans-serif は、万一 CSS変数が出力されない場合のハードフォールバック。
+$font-family-map: (
+  base: var(--ff-base, sans-serif),
+  sub: var(--ff-sub, sans-serif),
+);
+
+@mixin FontFamily($type: base) {
+  $font-family: map.get($font-family-map, $type);
+
+  @if $font-family {
+    font-family: $font-family;
+  } @else {
+    @warn 'Unknown font type: #{$type}';
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Typography
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$font-styles: (
+  x5l: (
+    font-size: 5rem,
+    line-height: 1.5,
+  ),
+  x4l: (
+    font-size: 4rem,
+    line-height: 1.5,
+  ),
+  x3l: (
+    font-size: 3rem,
+    line-height: 1.5,
+  ),
+  x2l: (
+    font-size: 2rem,
+    line-height: 1.5,
+  ),
+  xl: (
+    font-size: 1.5rem,
+    line-height: 1.5,
+  ),
+  l: (
+    font-size: 1.25rem,
+    line-height: 1.5,
+  ),
+  m: (
+    font-size: 1rem,
+    line-height: 1.75,
+  ),
+  s: (
+    font-size: 0.9rem,
+    line-height: 1.75,
+  ),
+  xs: (
+    font-size: 0.8rem,
+    line-height: 1.75,
+  ),
+);
+
+@mixin FontStyle($name, $weight: null) {
+  $style: map.get($font-styles, $name);
+
+  @if not $style {
+    @error "Unknown font style: #{$name}";
+  }
+
+  font-size: map.get($style, font-size);
+  line-height: map.get($style, line-height);
+
+  @if $weight {
+    font-weight: $weight;
+  }
+}

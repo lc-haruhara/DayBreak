@@ -1,0 +1,180 @@
+@use "foundation/index" as *;
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 SandwichEditor
+//
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-single-contents {
+  .c-swe-list,
+  .c-swe-table,
+  .c-swe-youtube,
+  .c-swe-link-button,
+  .c-swe-file {
+    margin-bottom: 4rem;
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ グリッドレイアウト等のdefaultの設定
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-swe-grid {
+  width: 100%;
+  @include Flex(left, null, 4rem);
+  margin-bottom: 4rem;
+
+  @include Breakpoint(inch7) {
+    margin-bottom: 0;
+  }
+
+  //1col
+  .grid {
+    width: 100%;
+  }
+
+  //2col
+  &._2col {
+    .grid {
+      @include FlexItem(2, 4rem);
+
+      @include Breakpoint(inch7) {
+        width: 100%;
+      }
+    }
+  }
+
+  //3col
+  &._3col {
+    .grid {
+      @include FlexItem(3, 4rem);
+
+      @include Breakpoint(inch7) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ 見出し
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//ページタイトル
+.c-swe-page-title {
+  @include FontStyle(x2l);
+}
+
+//見出し大
+.c-swe-heading-big {
+  @include FontStyle(x2l);
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+//見出し小
+.c-swe-heading-small {
+  @include FontStyle(l);
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ 画像
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Imageの梱包要素
+.c-swe-grid-img-wrap {
+  & + .c-swe-grid-text {
+    //テキストと並んだ場合
+    margin-top: 1rem;
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ テキスト
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//画像に対してのキャプション
+.c-swe-grid-caption {
+  @include FontStyle(s);
+  font-style: italic;
+  color: #aaa;
+}
+
+//本文
+.c-swe-grid-text {
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ テキストリンク
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-swe-link-text {
+  margin: 0 0.25rem;
+  color: #000;
+
+  &::after {
+    margin-left: 0.15rem;
+    font-family: "Material Symbols Outlined";
+    vertical-align: bottom;
+    content: "open_in_new";
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ Youtube埋め込み
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-swe-youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+//	✅ テーブル
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-swe-table {
+  table {
+    width: 100%;
+    border-bottom: 1px solid color(border);
+
+    @include Breakpoint(inch13) {
+      //横スクロール用
+      overflow-x: scroll;
+    }
+
+    th {
+      padding: 1rem;
+      color: #fff;
+      background: #aaa;
+      border-right: 1px solid color(border);
+    }
+
+    tr {
+      padding: 1rem;
+      border-top: 1px solid color(border);
+      border-left: 1px solid color(border);
+    }
+
+    td {
+      max-width: 200px;
+      padding: 1rem;
+      border-right: 1px solid color(border);
+    }
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ リンクボタン
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-swe-file,
+.c-swe-link-button {
+  text-align: center;
+}

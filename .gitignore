@@ -1,0 +1,12 @@
+wp-content/wpvividbackups/*
+wp-content/wpvivid_staging/*
+wp-content/wpvivid_uploads/*
+wp-content/ewww/debug.log
+wp-content/ai1wm-backups/*
+*.log
+*.csv
+.DS_Store
+Thumbs.db
+local-phpinfo.php
+local-adminer-*.php
+node_modules

@@ -1,0 +1,35 @@
+@charset "utf-8";
+@use "foundation/index" as *;
+
+// 💬 Description.........................................
+//
+// View Transition API scss
+//
+// ............................................................
+@view-transition {
+  navigation: auto;
+}
+
+// 新ページを上に
+::view-transition-new(root) {
+  z-index: 1;
+  animation: fade-in 0.3s ease both;
+}
+
+// 旧ページは残す
+::view-transition-old(root) {
+  z-index: 0;
+  animation: fade-out 0.3s ease both;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0.999; // ←これが白フラッシュ対策の核
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}

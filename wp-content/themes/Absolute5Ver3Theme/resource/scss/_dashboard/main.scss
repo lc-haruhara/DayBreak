@@ -1,0 +1,7 @@
+// 作成したsassを拡張子(.sass)とファイル名頭にある_を削って増やしていく
+// 増やしたsassに記載したソースは、コンパイルすると 1枚のCSS (main.css) に全てまとめて吐き出される
+
+//Foundation
+@use "admin-ui/layout";
+@use "admin-ui/icons";
+@use "admin-ui/sandwich-editor";

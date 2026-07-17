@@ -1,0 +1,21 @@
+// Dialogs ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@use "./parts/dialogs/DialogCookie/DialogCookie";
+
+// Editors ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@use "./parts/editors/SandwichEditor/SandwichEditorDefault";
+
+// Forms ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@use "./parts/forms/FormPrivacyConsent/FormPrivacyConsent";
+
+// Loadings ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@use "./parts/loadings/LoadingCommon/LoadingCommon";
+
+// Modals ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@use "./parts/modals/ModalCommon/ModalCommon";
+
+// Navigation ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@use "./parts/navigations/NavigationGlobal/NavigationGlobal";
+@use "./parts/navigations/NavigationDrawer/NavigationDrawer";
+
+// Paginations ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@use "./parts/paginations/PaginationCommon/PaginationCommon";

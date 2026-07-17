@@ -1,0 +1,34 @@
+{
+  "organization": {
+    "@type": "Organization",
+    "name": "会社名",
+    "address": {
+      "postalCode": "000-0000",
+      "addressLocality": "東京都◯◯区",
+      "streetAddress": "◯◯1-2-3",
+      "addressCountry": "JP"
+    },
+    "contactPoint": {
+      "telephone": "03-0000-0000",
+      "contactType": "customer support",
+      "areaServed": "JP",
+      "availableLanguage": "Japanese"
+    }
+  },
+  "entity": {
+    "@type": "TODO: (会社 : Company / Organization) (店舗: LocalBusiness / Store) (個人: Person) (ソフトウェア: SoftwareApplication)",
+    "@id": "TODO: (会社 : Company / Organization) (店舗: LocalBusiness / Store) (個人: Person) (ソフトウェア: SoftwareApplication)",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "offers": {
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "priceCurrency": "JPY"
+      }
+    }
+  }
+}

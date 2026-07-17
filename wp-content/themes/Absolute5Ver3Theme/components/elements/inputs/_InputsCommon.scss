@@ -1,0 +1,134 @@
+@use "foundation/index" as *;
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+//	🍔 Reset
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+button,
+textarea,
+select {
+  color: color(main);
+}
+
+input[type="submit"] {
+  color: color(main);
+}
+
+@mixin InputStyle {
+  padding: 0.75em 1rem;
+  border: 1px solid color(border);
+}
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+//	🍔 Form
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-input {
+  padding: 4rem;
+  @include ContentsPadding(l, none);
+
+  .wpcf7-form {
+    @include Flex(left, null, 2rem);
+    flex-direction: column;
+  }
+
+  ::-webkit-input-placeholder {
+    opacity: 0;
+  }
+
+  :-ms-input-placeholder {
+    opacity: 0;
+  }
+
+  ::-moz-placeholder {
+    opacity: 0;
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// 🍔 Label
+// .c-input-item の中に aria-required=true を持った入力要素があれば 必須 のテキスト表示
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-input-item:has([aria-required="true"]) .c-input-label::after,
+.c-input-radio:has([class*="required"]) .c-input-label::after {
+  content: "必須";
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Placeholder
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+.c-input-placeholder {
+  @include InputStyle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  pointer-events: none;
+  background: none;
+  border: 1px solid rgba($color: #000000, $alpha: 0);
+  transition: 0.25s ease;
+}
+
+.c-input-item:has(input:not(:placeholder-shown)) .c-input-placeholder,
+.c-input-item:has(textarea:not(:placeholder-shown)) .c-input-placeholder {
+  opacity: 0;
+  translate: 0 0.25rem;
+}
+
+.c-input-item:not(:has(textarea)) .c-input-placeholder-body {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Item
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-input-item {
+  position: relative;
+}
+
+.c-input-item-input {
+  position: relative;
+
+  .wpcf7-form-control-wrap {
+    position: relative;
+    display: block;
+  }
+}
+
+.c-input-item-input-body {
+  position: relative;
+  display: block;
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Item
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-input-item input[type="text"],
+.c-input-item input[type="email"],
+.c-input-item input[type="tel"],
+.c-input-item select,
+.c-input-item textarea {
+  @include InputStyle;
+}
+
+.c-input-item textarea {
+  min-height: 10rem;
+  field-sizing: content;
+}

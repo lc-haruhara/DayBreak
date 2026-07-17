@@ -1,0 +1,33 @@
+@use "foundation/index" as *;
+
+// Material Symbols の読み込みは header（functions/config/fonts.config.php の
+// material_symbols）で icon_names を絞り込んで一元管理・自動生成する。
+// ここでの @import は行わない。
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 CommonStyle
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-icon {
+  @include IconMtStyle;
+  text-align: center;
+  will-change: transform;
+
+  &._chevron_forward {
+    translate: 0 -7%;
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 ButtonStyle
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-icon-btn {
+  @include IconButtonStyle();
+
+  ._chevron_forward {
+    translate: 8% -4%;
+  }
+}

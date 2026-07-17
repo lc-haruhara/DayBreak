@@ -1,0 +1,884 @@
+# Translation of Plugins - Limit Login Attempts Reloaded &#8211; Login Security, Brute Force Protection, Firewall - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Limit Login Attempts Reloaded &#8211; Login Security, Brute Force Protection, Firewall - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-07-29 14:21:23+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Limit Login Attempts Reloaded &#8211; Login Security, Brute Force Protection, Firewall - Stable (latest release)\n"
+
+#: views/tab-settings.php:631
+msgid "Display left menu item"
+msgstr "左メニューアイテムに表示"
+
+#: views/tab-settings.php:626 views/tab-settings.php:643
+#: views/tab-settings.php:674
+msgid "(Save and reload this page to see the changes)"
+msgstr "(変更内容を確認するためには保存してこのページをリロードしてください)"
+
+#: views/tab-settings.php:619
+msgid "The LLAR plugin displays its item on the top navigation menu, which provides a shortcut to the plugin."
+msgstr "本プラグインをトップのナビゲーションメニューに表示します、プラグインへのショートカットを提供します。"
+
+#: views/tab-settings.php:636
+msgid "The LLAR plugin displays its item on the left navigation menu, which provides a shortcut to the plugin."
+msgstr "本プラグインをトップのナビゲーションメニューに表示します、プラグインへのショートカットを提供します。"
+
+#: views/tab-settings.php:614
+msgid "Display top menu item"
+msgstr "トップメニューに表示"
+
+#: views/tab-logs-local.php:245
+msgid "Unlocked"
+msgstr "ロック解除"
+
+#: views/tab-logs-local.php:242
+msgid "Unlock"
+msgstr "ロック解除"
+
+#: views/tab-logs-local.php:233
+msgid " lockouts"
+msgstr " ロックアウト"
+
+#: views/tab-logs-local.php:226
+msgid "F d, Y H:i"
+msgstr "Y年n月j日 H:i"
+
+#: core/LimitLoginAttempts.php:967
+msgid "LLAR"
+msgstr "LLAR"
+
+#: views/tab-settings.php:803
+msgid "Test email has been sent!"
+msgstr "テストメールを送信しました。"
+
+#: views/tab-settings.php:196
+msgid "After the specified number of lockouts the lockout time will increase by specified hours."
+msgstr "指定された回数のロックアウトの後、ロックアウト時間は指定された時間だけ増加します。"
+
+#: views/tab-settings.php:167
+msgid "Number of failed attempts allowed before locking out."
+msgstr "ロックアウトまで許可された試行失敗の回数"
+
+#: views/tab-settings.php:153
+msgid "Set lockout limits based on failed attempts."
+msgstr "失敗した試行に基づいてロックアウト制限を設定します。"
+
+#: views/tab-settings.php:113
+msgid "Switches from free version (local) to premium (cloud)."
+msgstr "無料バージョン (ローカル) からプレミアム (クラウド) に切り替えます。"
+
+#: views/tab-settings.php:599
+msgid "Test Email Notifications"
+msgstr "メール通知のテスト"
+
+#: views/tab-settings.php:584
+msgid "Email address to which lockout notifications will be sent."
+msgstr "ロックアウト通知を送信するメールアドレス。"
+
+#: views/tab-settings.php:538
+msgid "This message will appear at the bottom of the login page."
+msgstr "このメッセージはログインページの下部に現れます。"
+
+#: views/tab-logs-local.php:111
+msgid "Denylist"
+msgstr "拒否リスト"
+
+#: views/tab-settings.php:231
+msgid "Server variables containing IP addresses."
+msgstr "IP アドレスを含むサーバー変数。"
+
+#: core/LimitLoginAttempts.php:861 resources/compare-plans-data.php:72
+#: views/options-page.php:158
+msgid "Login Firewall"
+msgstr "ログインファイヤーウォール"
+
+#: core/Ajax.php:1134
+msgid "Wrong email format."
+msgstr "メールアドレスの形式が間違っています。"
+
+#: views/tab-settings.php:180
+msgid "Lockout time in minutes."
+msgstr "ロックアウト時間を分単位で指定します。"
+
+#: views/tab-settings.php:209
+msgid "Time in hours before blocks are removed."
+msgstr "ブロック解除までの時間を、1時間単位で指定します。"
+
+#: views/chart-circle-failed-attempts-today.php:120
+msgid "Cloud protection enabled"
+msgstr "クラウド保護が有効になっています"
+
+#: views/emails/failed-login.php:355
+msgid "from these notifications."
+msgstr "これらの通知から。"
+
+#: views/emails/failed-login.php:354
+msgid "Unsubscribe"
+msgstr "登録解除"
+
+#: views/emails/failed-login.php:324
+msgid " for more information on our premium services, which can automatically block and detect malicious IP addresses."
+msgstr " 悪意のある IP アドレスを自動的にブロックおよび検出できるプレミアム サービスの詳細については、こちらをご覧ください。"
+
+#: views/emails/failed-login.php:324
+msgid "Limit Login Attempts Reloaded website"
+msgstr "Limit Login Attempts Reloaded ウェブサイト"
+
+#: views/emails/failed-login.php:320
+msgid "How dangerous is this failed login attempt?"
+msgstr "このログイン試行の失敗はどの程度危険ですか?"
+
+#: views/emails/failed-login.php:318
+msgid "You are receiving this email because there was a failed login attempt on your website {domain}. If you'd like to opt out of these notifications, please click the “Unsubscribe” link below."
+msgstr "ウェブサイト {domain} でログイン試行が失敗したため、このメールが送信されています。 これらの通知をオプトアウトしたい場合は、下の「配信停止」リンクをクリックしてください。"
+
+#: views/emails/failed-login.php:317
+msgid "Why am I getting these emails?"
+msgstr "このメールが届いた理由は ?"
+
+#: views/emails/failed-login.php:321
+msgid "Unfortunately, we cannot determine the severity of the IP address with the free version of the plugin. If the IP continues to make attempts and is not recognized by your organization, then it's likely to have malicious intent. Depending on how frequent the attacks are, you may experience performance issues. In the plugin dashboard, you can investigate the frequency of the failed login attempts in the logs and take additional steps to protect your website (i.e. adding them to the block list). You can visit the "
+msgstr "残念ながら、無料版のプラグインでは IP アドレスの重要度を判断できません。 IP が試行を続けても組織によって認識されない場合は、悪意がある可能性があります。 攻撃の頻度によっては、パフォーマンスの問題が発生する可能性があります。 プラグイン ダッシュボードでは、ログ内の失敗したログイン試行の頻度を調査し、Web サイトを保護するための追加の手順 (ブロック リストへの追加など) を実行できます。 次を訪問して "
+
+#: views/emails/failed-login.php:315
+msgid "A failed login attempt is when an IP address uses incorrect credentials to log into your website. The IP address could be a human operator, or a program designed to guess your password."
+msgstr "ログイン試行の失敗とは、ある IP アドレスが Web サイトへのログインに間違ったアカウント情報を使用した場合に発生します。 IP アドレスは人間のオペレーターである可能性もあれば、パスワードを推測するように設計されたプログラムである可能性もあります。"
+
+#: views/emails/failed-login.php:314
+msgid "What is a failed login attempt?"
+msgstr "ログイン試行の失敗とは何ですか ?"
+
+#: views/emails/failed-login.php:312
+msgid "Frequently Asked Questions"
+msgstr "よくある質問"
+
+#: views/emails/failed-login.php:283
+msgid "Go to Dashboard"
+msgstr "ダッシュボードへ移動"
+
+#: views/emails/failed-login.php:269
+msgid "Please visit your WordPress dashboard for additional details, investigation options, and help articles."
+msgstr "詳細、調査オプション、ヘルプ記事については、WordPress ダッシュボードにアクセスしてください。"
+
+#: views/emails/failed-login.php:248
+msgid "This is installed on your <b>{domain}</b> WordPress site."
+msgstr "あなたの WordPress サイト <b>{domain}</b> にインストールされました。"
+
+#: views/emails/failed-login.php:244
+msgid "Hello,"
+msgstr "こんにちは"
+
+#: views/emails/failed-login.php:243
+msgid "Hello {name},"
+msgstr "こんにちは、 {name} さん"
+
+#: views/chart-circle-failed-attempts-today.php:46
+#: views/chart-circle-failed-attempts-today.php:80
+msgid "(past 24 hrs)"
+msgstr "(過去24時間)"
+
+#: views/tab-settings.php:296 views/tab-settings.php:462
+msgid "No contract - cancel anytime"
+msgstr "契約なし - いつでもキャンセル可能"
+
+#: views/tab-settings.php:346
+msgid "Add this code to all websites in your network to sync protection (payment required for additional domains unless it's with an Agency plan's first tier)."
+msgstr "このコードをネットワーク内のすべての Web サイトに追加して保護を同期します (代理店プランに加入していない場合、追加のドメインには支払いが必要です)。"
+
+#: resources/compare-plans-data.php:128
+msgid "Intelligent IP Blocking"
+msgstr "インテリジェントな IP ブロッキング"
+
+#: resources/compare-plans-data.php:120
+msgid "Access Active Cloud Blocklist"
+msgstr "アクティブなクラウドブロックリストにアクセスする"
+
+#: resources/compare-plans-data.php:113
+msgid "Automatically add malicious IPs to your blocklist when triggered by the system."
+msgstr "システムによってトリガーされたときに、悪意のある IP をブロックリストに自動的に追加します。"
+
+#: resources/compare-plans-data.php:112
+msgid "Auto IP Blocklist"
+msgstr "自動 IP ブロックリスト"
+
+#: resources/compare-plans-data.php:136
+msgid "Synchronize Lockouts & Safelists/Blocklists"
+msgstr "ロックアウトとセーフリスト/ブロックリストを同期する"
+
+#: resources/compare-plans-data.php:86
+msgid "300k requests per month"
+msgstr "毎月 300k リクエスト"
+
+#: resources/compare-plans-data.php:85
+msgid "200k requests per month"
+msgstr "毎月 200k リクエスト"
+
+#: resources/compare-plans-data.php:84
+msgid "100k requests per month"
+msgstr "毎月 100k リクエスト"
+
+#: resources/compare-plans-data.php:81
+msgid "Absorb failed login attempts from brute force bots in the cloud to keep your website at its optimal performance."
+msgstr "クラウド上のブルート フォース ボットによるログイン試行の失敗を吸収し、Web サイトのパフォーマンスを最適に保ちます。"
+
+#: resources/compare-plans-data.php:65
+msgid "Configurable Lockout Timing"
+msgstr "設定可能なロックアウト タイミング"
+
+#: resources/compare-plans-data.php:58
+msgid "Limit Number of Retry Attempts"
+msgstr "再試行の制限回数"
+
+#: resources/compare-plans-data.php:27
+msgid "Installed"
+msgstr "インストール済み"
+
+#: core/LimitLoginAttempts.php:884
+msgid "Premium"
+msgstr "プレミアム"
+
+#: views/tab-premium.php:114
+msgid "Features comparison"
+msgstr "機能比較"
+
+#: views/tab-premium.php:104
+msgid "Why Should I Consider Premium?"
+msgstr "プレミアムを検討すべき理由は何ですか ?"
+
+#: views/tab-premium.php:70
+msgid "Support"
+msgstr "サポート"
+
+#: views/tab-premium.php:80
+msgid "Get It Here"
+msgstr "こちらで入手"
+
+#: views/tab-premium.php:65
+msgid "Ask a pre-sales question"
+msgstr "購入前に質問する"
+
+#: views/tab-premium.php:60
+msgid "Pre-sales FAQs"
+msgstr "ご購入前のよくある質問"
+
+#: views/tab-premium.php:55
+msgid "Full feature list"
+msgstr "全機能一覧"
+
+#: views/tab-premium.php:49
+msgid "Limit Login Attempts Reloaded <strong>Premium</strong>"
+msgstr "Limit Login Attempts Reloaded <strong>Premium</strong>"
+
+#: views/tab-help.php:213
+msgid "What URLs are being attacked and protected?"
+msgstr "どの URL が攻撃され、保護されていますか ?"
+
+#: views/tab-help.php:207
+msgid "I just installed LLAR and I'm already getting several failed login attempts"
+msgstr "LLAR をインストールしたばかりですが、すでにログイン試行が数回失敗しています"
+
+#: views/tab-help.php:201
+msgid "What do I do if all users get blocked?"
+msgstr "すべてのユーザーがブロックされた場合はどうすればよいですか ?"
+
+#: views/chart-circle-failed-attempts-today.php:47
+#: views/chart-circle-failed-attempts-today.php:81
+msgid "Your site is currently at a low risk for brute force activity"
+msgstr "あなたのサイトは現在、ブルートフォースアクティビティのリスクが低いです"
+
+#: views/tab-help.php:120
+msgid "Cloud Service & Security"
+msgstr "クラウドサービス & セキュリティ"
+
+#: views/tab-help.php:114
+msgid "All Documentation"
+msgstr "すべてのドキュメント"
+
+#: views/tab-help.php:103
+msgid "GDPR Information"
+msgstr "GDPR 情報"
+
+#: views/tab-help.php:94
+msgid "Go To Support Forums"
+msgstr "サポートフォーラムへ"
+
+#: views/tab-help.php:86
+msgid "Free Support"
+msgstr "無料サポート"
+
+#: views/tab-help.php:70
+msgid "Upgrade Now to Access Premium Support"
+msgstr "今すぐアップグレードしてプレミアム サポートにアクセス"
+
+#: views/tab-debug.php:38
+msgid "Version"
+msgstr "バージョン"
+
+#: views/chart-failed-attempts.php:227
+msgid "Attempts"
+msgstr "試行"
+
+#: views/options-page.php:178
+msgid "Premium / Extensions"
+msgstr "プレミアム / 拡張機能"
+
+#: views/options-page.php:90
+msgid "Yes, enable auto-update"
+msgstr "はい、自動更新を有効化します。"
+
+#: views/app-widgets/event-log.php:54 views/app-widgets/login-attempts.php:62
+msgid "Load older events"
+msgstr "過去のイベントを読み込み"
+
+#: views/onboarding-popup.php:207
+msgid "Yes"
+msgstr "はい / Yes"
+
+#: views/micro-cloud-modal.php:68 views/onboarding-popup.php:163
+msgid "Continue"
+msgstr "続行"
+
+#: views/options-page.php:94
+msgid "No thanks"
+msgstr "いいえ、結構です"
+
+#: views/tab-help.php:80
+msgid "Upgrade To Premium"
+msgstr "プレミアムへアップグレード"
+
+#: views/tab-logs-custom.php:36
+msgid "Or"
+msgstr "または"
+
+#: views/onboarding-popup.php:210
+msgid "No"
+msgstr "いいえ / No"
+
+#: views/app-widgets/active-lockouts.php:13
+msgid "Reload"
+msgstr "リロード"
+
+#: views/tab-settings.php:307 views/tab-settings.php:414
+msgid "Upgrade"
+msgstr "アップグレード"
+
+#: views/app-widgets/acl-rules.php:14 views/app-widgets/acl-rules.php:63
+msgid "Documentation"
+msgstr "ドキュメンテーション"
+
+#. Description of the plugin
+#: limit-login-attempts-reloaded.php
+msgid "Block excessive login attempts and protect your site against brute force attacks. Simple, yet powerful tools to improve site performance."
+msgstr "過剰なログイン試行をブロックし、ブルートフォース (総当り) 攻撃からサイトを保護します。サイトのパフォーマンスを改善するための、シンプルながら強力なツールです。"
+
+#: views/tab-settings.php:647
+msgid "Hide Dashboard Widget"
+msgstr "ダッシュボードウィジェットを非表示にする"
+
+#: views/app-widgets/event-log.php:19
+msgid "Full Logs"
+msgstr "完全なログ"
+
+#: views/app-widgets/event-log.php:24
+msgid "All attempts blocked by access rules are hidden by default. You can see the full log at this link."
+msgstr "アクセスルールによってブロックされたすべての試行は、デフォルトで非表示になっています。このリンクで完全なログを表示できます。"
+
+#: views/tab-settings.php:548
+msgid "You can use a shortcode here to insert links, for example, a link to your Privacy Policy page. <br>The shortcode is: [llar-link url=\"https://example.com\" text=\"Privacy Policy\"]"
+msgstr "ここでショートコードを使用して、リンクを挿入できます。例えばプライバシーポリシーページへのリンクなどです。<br>その場合のショートコードは [llar-link url=\"https://example.com\" text=\"Privacy Policy\"] になります。"
+
+#: views/app-widgets/country-access-rules.php:22
+msgid "these countries:"
+msgstr "これらの国:"
+
+#: views/app-widgets/country-access-rules.php:14
+msgid "Country Access Rules"
+msgstr "国別アクセスルール"
+
+#: views/tab-settings.php:533
+msgid "GDPR message"
+msgstr "GDPR メッセージ"
+
+#: views/chart-circle-failed-attempts-today.php:102
+#: views/chart-failed-attempts.php:36 views/chart-failed-attempts.php:121
+#: views/chart-failed-attempts.php:131
+msgid "Failed Login Attempts"
+msgstr "ログインに失敗しました"
+
+#: views/chart-circle-failed-attempts-today.php:93
+msgid "Failed Login Attempts Today"
+msgstr "今日のログイン試行失敗"
+
+#: core/LimitLoginAttempts.php:469 views/tab-dashboard.php:97
+#: views/tab-dashboard.php:253
+msgid "Upgrade to Premium"
+msgstr "プレミアムへアップグレード"
+
+#: views/tab-dashboard.php:113
+msgid "Tools"
+msgstr "ツール"
+
+#: core/LimitLoginAttempts.php:876 views/options-page.php:174
+#: views/tab-dashboard.php:128
+msgid "Help"
+msgstr "ヘルプ"
+
+#: views/onboarding-popup.php:43
+msgid "Notifications"
+msgstr "通知"
+
+#: views/tab-dashboard.php:67 views/tab-settings.php:96
+msgid "Learn More"
+msgstr "さらに詳しく"
+
+#: views/tab-dashboard.php:143
+msgid "Global Options"
+msgstr "全般設定"
+
+#: views/tab-dashboard.php:117
+msgid "View lockouts logs, block or whitelist usernames or IPs, and more."
+msgstr "ロックアウト ログの表示、ユーザー名または IP のブロックまたはホワイトリストなどを確認。"
+
+#: views/tab-dashboard.php:83
+msgid "Premium Protection Disabled"
+msgstr "プレミアム保護が無効です"
+
+#: views/tab-dashboard.php:147
+msgid "Many options such as notifications, alerts, premium status, and more."
+msgstr "通知、アラート、プレミアムステータスなどの多くのオプション。"
+
+#: views/tab-dashboard.php:132
+msgid "Find the documentation and help you need."
+msgstr "必要なドキュメントやヘルプが見つかります。"
+
+#: resources/compare-plans-data.php:43
+msgid "Upgrade now"
+msgstr "今すぐアップグレード"
+
+#: views/tab-logs-local.php:88
+msgid "Safelist"
+msgstr "セーフリスト"
+
+#: resources/compare-plans-data.php:80
+msgid "Performance Optimizer"
+msgstr "パフォーマンス最適化"
+
+#: views/chart-failed-attempts.php:44 views/chart-failed-attempts.php:147
+#: views/chart-failed-attempts.php:244
+msgid "Requests"
+msgstr "リクエスト"
+
+#: views/app-widgets/active-lockouts.php:8
+msgid "Active Lockouts"
+msgstr "ロックアウト中"
+
+#: views/tab-settings.php:319 views/tab-settings.php:324
+msgid "Setup Code"
+msgstr "セットアップコード"
+
+#: views/chart-circle-failed-attempts-today.php:45
+#: views/chart-circle-failed-attempts-today.php:79
+msgid "%d failed login attempt "
+msgid_plural "%d failed login attempts "
+msgstr[0] "%d 回ログインに失敗 "
+
+#: core/LimitLoginAttempts.php:2371
+msgid "Don't show this message again"
+msgstr "このメッセージを再び表示しない"
+
+#: core/LimitLoginAttempts.php:2370
+msgid "Remind me a month from now"
+msgstr "1か月後リマインダー"
+
+#: core/LimitLoginAttempts.php:2369
+msgid "Yes, turn on email notifications"
+msgstr "はい、メール通知を有効化します"
+
+#: resources/compare-plans-data.php:144 views/tab-help.php:225
+msgid "Premium Support"
+msgstr "プレミアムサポート"
+
+#: views/app-widgets/event-log.php:37 views/app-widgets/login-attempts.php:49
+msgid "Time"
+msgstr "時刻"
+
+#: views/tab-settings.php:341
+msgid "Submit"
+msgstr "送信"
+
+#: views/app-widgets/acl-rules.php:25 views/app-widgets/acl-rules.php:74
+#: views/app-widgets/event-log.php:41
+msgid "Rule"
+msgstr "ルール"
+
+#: views/app-widgets/event-log.php:42
+msgid "Reason"
+msgstr "理由"
+
+#: core/LimitLoginAttempts.php:866 views/options-page.php:164
+msgid "Logs"
+msgstr "ログ"
+
+#: views/app-widgets/active-lockouts.php:23 views/app-widgets/event-log.php:40
+#: views/app-widgets/login-attempts.php:50
+msgid "Login"
+msgstr "ログイン"
+
+#: views/app-widgets/active-lockouts.php:22 views/app-widgets/event-log.php:38
+#: views/app-widgets/login-attempts.php:51
+msgid "IP"
+msgstr "IP"
+
+#: views/app-widgets/acl-rules.php:37 views/app-widgets/acl-rules.php:86
+#: views/app-widgets/country-access-rules.php:55
+msgid "Deny"
+msgstr "非承認"
+
+#: views/app-widgets/active-lockouts.php:24
+msgid "Count"
+msgstr "カウント"
+
+#: views/app-widgets/acl-rules.php:38 views/app-widgets/acl-rules.php:87
+msgid "Allow"
+msgstr "許可"
+
+#: views/app-widgets/acl-rules.php:44 views/app-widgets/acl-rules.php:93
+#: views/app-widgets/country-access-rules.php:26
+msgid "Add"
+msgstr "追加"
+
+#: views/app-widgets/event-log.php:46
+msgid "Actions"
+msgstr "操作"
+
+#: views/app-widgets/acl-rules.php:26 views/app-widgets/acl-rules.php:75
+msgid "Action"
+msgstr "操作"
+
+#. Author URI of the plugin
+#: limit-login-attempts-reloaded.php
+msgid "https://www.limitloginattempts.com/"
+msgstr "https://www.limitloginattempts.com/"
+
+#: views/app-widgets/acl-rules.php:39 views/app-widgets/acl-rules.php:88
+msgid "Pass"
+msgstr "パス"
+
+#: views/app-widgets/active-lockouts.php:25
+msgid "Expires in (minutes)"
+msgstr "有効期限 (分)"
+
+#: core/Ajax.php:359 core/Ajax.php:662
+msgid "No events yet."
+msgstr "イベントはまだありません。"
+
+#: views/app-widgets/event-log.php:45
+msgid "Lockout Duration"
+msgstr "ロックアウト期間"
+
+#: views/app-widgets/event-log.php:44
+msgid "Attempts Left"
+msgstr "ログイン試行可能回数"
+
+#: views/app-widgets/acl-rules.php:24 views/app-widgets/acl-rules.php:33
+#: views/app-widgets/acl-rules.php:73 views/app-widgets/acl-rules.php:82
+#: views/app-widgets/event-log.php:43
+msgid "Pattern"
+msgstr "パターン"
+
+#: views/tab-settings.php:256 views/tab-settings.php:426
+msgid "Absorb site load caused by attacks"
+msgstr "攻撃によるサイトの負荷を吸収する"
+
+#: views/tab-settings.php:144
+msgid "Local App"
+msgstr "ローカルアプリ"
+
+#: views/tab-settings.php:65
+msgid "App Settings"
+msgstr "アプリ設定"
+
+#: views/tab-settings.php:108
+msgid "Active App"
+msgstr "有効なアプリ"
+
+#: views/app-widgets/acl-rules.php:59
+msgid "IP Access Rules"
+msgstr "IP アクセスルール"
+
+#: views/app-widgets/acl-rules.php:10
+msgid "Login Access Rules"
+msgstr "ログインアクセスルール"
+
+#: views/app-widgets/event-log.php:14
+msgid "Event Log"
+msgstr "イベントログ"
+
+#: core/Ajax.php:779
+msgid "No rules yet."
+msgstr "まだルールがありません。"
+
+#: views/options-page.php:183
+msgid "Failover"
+msgstr "フェイルオーバー"
+
+#: views/tab-settings.php:353
+msgid "Configuration"
+msgstr "構成"
+
+#: views/tab-settings.php:289 views/tab-settings.php:456
+msgid "Run auto backups of access control lists, lockouts and logs"
+msgstr "アクセス制御リスト、ロックアウト、ログの自動バックアップを実行する"
+
+#: views/tab-settings.php:282 views/tab-settings.php:450
+msgid "Get premium support"
+msgstr "プレミアムサポートを取得"
+
+#: core/LimitLoginAttempts.php:451 core/LimitLoginAttempts.php:850
+#: views/options-page.php:148
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+#: core/LimitLoginAttempts.php:2044 core/LimitLoginAttempts.php:2118
+msgid "Settings saved."
+msgstr "設定を保存しました。"
+
+#: views/tab-settings.php:481
+msgid "General Settings"
+msgstr "一般設定"
+
+#: views/tab-settings.php:68
+msgid "The app absorbs the main load caused by brute-force attacks, analyzes login attempts, and blocks unwanted visitors. It provides other service functions as well."
+msgstr "このアプリはブルートフォース攻撃による主な負荷を吸収し、ログイン試行を分析し、不要な訪問者をブロックします。また、その他のサービス機能も提供しています。"
+
+#: views/tab-logs-local.php:142 views/tab-settings.php:475
+#: views/tab-settings.php:816
+msgid "Save Settings"
+msgstr "設定を保存"
+
+#: core/LimitLoginAttempts.php:2276
+msgid "Don't show again"
+msgstr "今後表示しない"
+
+#: core/LimitLoginAttempts.php:2278
+msgid "Leave a review"
+msgstr "レビューを書く"
+
+#: core/LimitLoginAttempts.php:2277
+msgid "Maybe later"
+msgstr "後で確認"
+
+#: core/LimitLoginAttempts.php:871 views/options-page.php:170
+msgid "Debug"
+msgstr "デバッグ"
+
+#: core/LimitLoginAttempts.php:452 core/LimitLoginAttempts.php:855
+#: views/options-page.php:152
+msgid "Settings"
+msgstr "設定"
+
+#: views/tab-debug.php:26
+msgid "Debug Info"
+msgstr "デバッグ情報"
+
+#: views/tab-settings.php:226
+msgid "Trusted IP Origins"
+msgstr "信頼できる IP Origin"
+
+#: views/tab-settings.php:241
+msgid "Specify the origins you trust in order of priority, separated by commas. We strongly recommend that you <b>do not</b> use anything other than REMOTE_ADDR since other origins can be easily faked. Examples: HTTP_X_FORWARDED_FOR, HTTP_CF_CONNECTING_IP, HTTP_X_SUCURI_CLIENTIP"
+msgstr "信頼できる発信元をコンマで区切って優先度順に指定します。他の発信元が簡単に偽装される可能性があるため、REMOTE_ADDR 以外を<b>使用しない</b>ことを強くお勧めします。例: HTTP_X_FORWARDED_FOR、HTTP_CF_CONNECTING_IP、HTTP_X_SUCURI_CLIENTIP"
+
+#: views/tab-settings.php:567 views/tab-settings.php:591
+msgid "Email to"
+msgstr "メール送信:"
+
+#: views/tab-settings.php:594
+msgid "after"
+msgstr "後"
+
+#: core/LimitLoginAttempts.php:1747
+msgid "<strong>ERROR</strong>: Incorrect email address or password."
+msgstr "<strong>エラー</strong>: メールアドレスまたはパスワードが間違っています。"
+
+#: views/tab-settings.php:522
+msgid "GDPR compliance"
+msgstr "GDPR 準拠"
+
+#: views/tab-logs-local.php:93 views/tab-logs-local.php:116
+msgid "One IP or IP range (1.2.3.4-5.6.7.8) per line"
+msgstr "1行につき1つの IP アドレス、またはIPアドレス範囲 (1.2.3.4-5.6.7.8) を入力"
+
+#: views/tab-logs-local.php:218
+msgctxt "Internet address"
+msgid "IP"
+msgstr "IP"
+
+#: views/tab-logs-local.php:217
+msgid "Date"
+msgstr "日付"
+
+#: views/tab-logs-local.php:194
+msgid "Lockout log"
+msgstr "ロックのログ"
+
+#: views/tab-settings.php:579
+msgid "Notify on lockout"
+msgstr "ロック通知"
+
+#: views/tab-settings.php:204
+msgid "hours until retries are reset"
+msgstr "時間でリトライ数をリセットする"
+
+#: views/tab-settings.php:191
+msgid "hours"
+msgstr "時間ロックする"
+
+#: views/tab-settings.php:187
+msgid "lockouts increase lockout time to"
+msgstr "回ロックされると"
+
+#: views/tab-settings.php:175
+msgid "minutes lockout"
+msgstr "分間ロックする"
+
+#: views/tab-settings.php:162
+msgid "allowed retries"
+msgstr "回までリトライを許可する"
+
+#: views/tab-settings.php:148
+msgid "Lockout"
+msgstr "ロック"
+
+#: views/tab-logs-local.php:71
+msgid "%d IP is currently blocked from trying to log in"
+msgstr "%d個のIPは現在ログインをブロックされています"
+
+#: views/tab-logs-local.php:68
+msgid "Restore Lockouts"
+msgstr "ロックを解除する"
+
+#: views/tab-logs-local.php:57
+msgid "No lockouts yet"
+msgstr "ロックはまだありません"
+
+#: views/tab-logs-local.php:53
+msgid "%d lockout since last reset"
+msgid_plural "%d lockouts since last reset"
+msgstr[0] "最後のリセットから%d回ロック"
+
+#: views/tab-logs-local.php:50
+msgid "Reset Counter"
+msgstr "カウントをリセットする"
+
+#: views/tab-logs-local.php:45
+msgid "Total lockouts"
+msgstr "総ロック数"
+
+#: core/LimitLoginAttempts.php:1972
+msgid "Cleared current lockouts"
+msgstr "削除された現在のロック"
+
+#: core/LimitLoginAttempts.php:1965
+msgid "Reset lockout count"
+msgstr "ロック回数をリセット"
+
+#: core/LimitLoginAttempts.php:1770
+msgid "WC Error"
+msgstr "WC エラー"
+
+#: core/LimitLoginAttempts.php:1750
+msgid "<strong>ERROR</strong>: Incorrect username or password."
+msgstr "<strong>エラー</strong>: ユーザー名またはパスワードが正しくありません。"
+
+#: core/LimitLoginAttempts.php:619 core/LimitLoginAttempts.php:1210
+#: core/LimitLoginAttempts.php:1710
+msgid "Please try again in %d minute."
+msgid_plural "Please try again in %d minutes."
+msgstr[0] "%d 分後に再度ログインを試みてください。"
+
+#: core/LimitLoginAttempts.php:617 core/LimitLoginAttempts.php:1208
+#: core/LimitLoginAttempts.php:1707
+msgid "Please try again in %d hour."
+msgid_plural "Please try again in %d hours."
+msgstr[0] "%d 時間後に再度ログインを試みてください。"
+
+#: core/LimitLoginAttempts.php:1695
+msgid "Please try again later."
+msgstr "時間をおいて再度ログインを試みてください。"
+
+#: core/LimitLoginAttempts.php:610 core/LimitLoginAttempts.php:665
+#: core/LimitLoginAttempts.php:1201 core/LimitLoginAttempts.php:1628
+#: core/LimitLoginAttempts.php:1687
+msgid "<strong>ERROR</strong>: Too many failed login attempts."
+msgstr "<strong>エラー</strong>: ログイン失敗回数が一定数になりました。"
+
+#: core/LimitLoginAttempts.php:1402
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d分間"
+
+#: core/LimitLoginAttempts.php:1395
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d時間"
+
+#: core/Ajax.php:994
+msgid "<strong>%d</strong> attempt remaining."
+msgid_plural "<strong>%d</strong> attempts remaining."
+msgstr[0] "残り<strong>%d</strong>回まで間違えることができます。"
+
+#: views/tab-logs-local.php:101 views/tab-logs-local.php:124
+msgid "One Username per line"
+msgstr "1行につき1人のユーザー名を入力"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: limit-login-attempts-reloaded.php core/LimitLoginAttempts.php:194
+msgid "Limit Login Attempts Reloaded"
+msgstr "Limit Login Attempts Reloaded"
+
+#: views/tab-logs-local.php:64
+msgid "Active lockouts"
+msgstr "ロック中"
+
+#: views/app-widgets/event-log.php:39 views/tab-logs-local.php:220
+msgid "Gateway"
+msgstr "ゲートウェイ"
+
+#: views/tab-settings.php:498
+msgid "Use global settings"
+msgstr "グローバル設定を使用"
+
+#: views/tab-logs-local.php:219
+msgid "Tried to log in as"
+msgstr "使用されたユーザー名"
+
+#: core/LimitLoginAttempts.php:1958
+msgid "Cleared IP log"
+msgstr "IP ログをクリアしました"
+
+#: views/tab-settings.php:492
+msgid "Let network sites use their own settings"
+msgstr "ネットワーク上のサイトに独自の設定を適用する"
+
+#: views/tab-settings.php:493
+msgid "If disabled, the global settings will be forcibly applied to the entire network."
+msgstr "無効にすると、グローバル設定がネットワーク全体に強制的に適用されます。"
+
+#: views/tab-settings.php:597
+msgid "lockouts"
+msgstr "ロックアウト"
+
+#: views/tab-logs-local.php:35
+msgid "Statistics"
+msgstr "統計情報"
+
+#: views/tab-logs-local.php:202
+msgid "Clear Log"
+msgstr "ログを消去"

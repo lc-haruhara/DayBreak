@@ -1,0 +1,135 @@
+@charset "utf-8";
+@use "foundation/index" as *;
+
+*:not(i),
+*:not(i)::after,
+*:not(i)::before {
+  font-family: $font-fallback-ja !important;
+}
+
+body {
+  background: #f8f9fc;
+}
+
+#wpwrap {
+  overflow: clip;
+}
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+//	🍔 SideMenu
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#adminmenu .wp-submenu a,
+#adminmenu .wp-submenu-head,
+#adminmenu a.menu-top {
+  font-size: 12px;
+}
+
+div.wp-menu-image::before {
+  padding: 10px 0;
+}
+
+#adminmenu li.wp-menu-separator {
+  height: auto;
+  padding: 0;
+  margin: 1rem 0;
+  cursor: inherit;
+}
+#adminmenu div.separator {
+  height: 1px;
+  background: #fff;
+  opacity: 0.1;
+}
+#adminmenu div.wp-menu-name {
+  padding: 12px 8px 12px 36px;
+}
+.c-dsb-heading-menu {
+  margin-top: 20px;
+  font-weight: 700;
+  color: rgba($color: #fff, $alpha: 0.3) !important;
+  pointer-events: none;
+  background: rgba($color: #fff, $alpha: 0.05);
+  .wp-menu-image {
+    display: none;
+  }
+  .wp-menu-name {
+    padding: 1.5em 0.5em !important;
+  }
+}
+#collapse-menu {
+  margin-top: 4rem !important;
+}
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+//	🍔 Contents
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.acf-internal-post-type .wp-list-table {
+  box-shadow: 0px 20px 30px rgba(70, 100, 160, 0.05);
+}
+.wrap {
+  // max-width: 1000px;
+  // margin: auto;
+}
+#titlewrap {
+  position: relative;
+}
+#titlediv #title {
+  padding: 2rem 1rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#titlediv #title-prompt-text {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  margin: auto;
+  font-size: 1.25rem;
+  translate: 0 -50%;
+}
+
+//投稿一覧
+.column-thumbnail {
+  width: 140px;
+}
+
+//Table
+.acf-internal-post-type #the-list tr:hover td,
+.acf-internal-post-type #the-list tr:hover th,
+.check-column input:hover + label,
+.check-column label:hover,
+.acf-internal-post-type .wp-list-table thead th,
+.acf-internal-post-type .wp-list-table thead td,
+.acf-internal-post-type .wp-list-table tfoot th,
+.acf-internal-post-type .wp-list-table tfoot td {
+  background: #fff !important;
+}
+.acf-internal-post-type .wp-list-table tbody td {
+  padding: 20px 20px;
+}
+.acf-internal-post-type .wp-list-table th.check-column,
+.acf-internal-post-type .wp-list-table td.check-column {
+  padding-top: 21px;
+}
+.acf-internal-post-type .wp-list-table thead th,
+.acf-internal-post-type .wp-list-table tfoot th {
+  font-size: 12px;
+}
+.check-column input:hover + label,
+.check-column label:hover,
+.acf-internal-post-type #the-list tr:hover td,
+.acf-internal-post-type #the-list tr:hover th {
+  background-color: rgb(233 240 243);
+}
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// プラグイン
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.plugin-version-author-uri {
+  opacity: 0.5;
+}

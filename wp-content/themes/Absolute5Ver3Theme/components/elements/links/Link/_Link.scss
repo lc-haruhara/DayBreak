@@ -1,0 +1,26 @@
+@use "foundation/index" as *;
+
+.c-link,
+.c-button {
+  position: relative;
+  font-weight: 700;
+  color: color(link);
+
+  &:focus-visible {
+    @include FocusStyle;
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 SvgIcon
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &:has(.c-icon svg) .c-icon {
+    width: 1.5rem;
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Icon - Blank
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  .c-icon._open_in_new {
+    translate: 0 -6%;
+  }
+}

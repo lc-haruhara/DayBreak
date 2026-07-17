@@ -1,0 +1,24 @@
+@use "foundation/index" as *;
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Select
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-input-item:has(select) {
+  select option[value=""] {
+    color: #999;
+    pointer-events: none;
+  }
+
+  .c-input-item-input-body::after {
+    @include IconMtStyle;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    margin: auto;
+    pointer-events: none;
+    content: "keyboard_arrow_down";
+    translate: 0 -50%;
+  }
+}

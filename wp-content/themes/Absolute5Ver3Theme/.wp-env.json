@@ -1,0 +1,11 @@
+{
+  "core": "../../..",
+  "themes": [
+    "."
+  ],
+  "config": {
+    "WP_DEBUG": true,
+    "SCRIPT_DEBUG": true,
+    "WP_ENVIRONMENT_TYPE": "local"
+  }
+}

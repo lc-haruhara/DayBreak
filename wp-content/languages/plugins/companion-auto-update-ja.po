@@ -1,0 +1,795 @@
+# Translation of Plugins - Companion Auto Update - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Companion Auto Update - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-02-10 02:54:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Companion Auto Update - Stable (latest release)\n"
+
+#. translators: interval, like every "two days" or every "five weeks"
+#: cau_functions.php:842
+msgid "Every %1$s %2$s"
+msgstr "%1$s ごとに %2$s に"
+
+#: admin/dashboard.php:521
+msgid "Rate us"
+msgstr "私たちを評価してください"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: companion-auto-update.php
+msgid "https://wijzijnqreative.nl/"
+msgstr "https://wijzijnqreative.nl/"
+
+#: admin/status.php:377
+msgid "No plugins have been put on hold."
+msgstr "保留されているプラグインはありません。"
+
+#: admin/status.php:354
+msgid "Till"
+msgstr "経過"
+
+#. translators: number of days
+#: admin/status.php:351
+msgid "%s days"
+msgstr "%s日"
+
+#: admin/status.php:82
+msgid "Will keep track of the update log and make sure updates are delayed when needed."
+msgstr "更新の記録を監視し、必要なら更新を遅延させる"
+
+#: admin/status.php:81
+msgid "The default WordPress notifications."
+msgstr "標準の WordPress の通知"
+
+#: admin/status.php:80
+msgid "Will notify you after successful updates."
+msgstr "更新の成功時に通知"
+
+#: admin/status.php:79
+msgid "Will notify you of available updates."
+msgstr "更新の利用可能時に通知"
+
+#: admin/status.php:62
+msgid "Log updater"
+msgstr "記録からの更新機能"
+
+#: admin/status.php:53
+msgid "Events"
+msgstr "イベント"
+
+#: cau_emails.php:404 cau_emails.php:405 cau_emails.php:406
+msgid "Visit"
+msgstr "アクセス"
+
+#: cau_emails.php:404
+msgid "Plugin details"
+msgstr "プラグイン詳細"
+
+#: admin/dashboard.php:312
+msgid "Show links to WordPress.org pages"
+msgstr "WordPress.org のページへのリンクを表示"
+
+#: admin/dashboard.php:337
+msgid "Sometimes we'll need your help updating our database version to the latest version, check this box to allow us to send you an email about this."
+msgstr "チェックすると、データベースを最新に更新するためにあなたの操作が必要な場合、メールでお知らせします。"
+
+#: admin/dashboard.php:333
+msgid "Database update required"
+msgstr "データベースの更新が必要"
+
+#: admin/dashboard.php:275
+msgid "Check for outdated software"
+msgstr "古いソフトウェアのチェック"
+
+#: cau_emails.php:516
+msgid "Hi there! We need your help updating the database of Companion Auto Update to the latest version. No rush, old features will continue to work but some new features might not work until you update the database."
+msgstr "こんにちは ! Companion Auto Update のデータベースを最新に更新するのに、あなたの操作が必要です。急ぎではなく、これまでの機能は動作します。一部の新機能は、データベースを更新するまで動作しないことがあります、"
+
+#: cau_emails.php:515
+msgid "We need your help with something"
+msgstr "操作が必要です"
+
+#: admin/dashboard.php:526
+msgid "Donations via PayPal. Amount can be changed."
+msgstr "PayPal 経由で寄付。金額は変更できます。"
+
+#: admin/dashboard.php:262 admin/dashboard.php:415
+msgid "Update notifications"
+msgstr "更新の通知"
+
+#: admin/status.php:322
+msgid "Toggle"
+msgstr "表示切替"
+
+#: cau_emails.php:77
+msgid "Unknown"
+msgstr "不明"
+
+#: cau_functions.php:838
+msgid "months"
+msgstr "か月"
+
+#: cau_functions.php:834
+msgid "weeks"
+msgstr "週間"
+
+#: cau_functions.php:830
+msgid "days"
+msgstr "日"
+
+#: cau_functions.php:826
+msgid "hours"
+msgstr "時間"
+
+#: cau_functions.php:821
+msgid "minutes"
+msgstr "分"
+
+#: cau_functions.php:787
+msgid "Every 4 weeks"
+msgstr "4週間ごと"
+
+#: cau_functions.php:781
+msgid "Every 2 weeks"
+msgstr "2週間ごと"
+
+#: cau_functions.php:775
+msgid "Every week"
+msgstr "1週間ごと"
+
+#: cau_emails.php:399
+msgid "to version"
+msgstr "更新後のバージョン"
+
+#: cau_emails.php:400 cau_emails.php:435
+msgid "Time of update"
+msgstr "更新日時"
+
+#: cau_emails.php:166
+msgid "You have outdated plugins on your site."
+msgstr "サイトに古くなったプラグインがあります。"
+
+#. translators: plugin/theme name and the wordpress version
+#: cau_emails.php:79
+msgid "%1$s tested up to: %2$s"
+msgstr "%1$s は以下までテスト済み: %2$s"
+
+#. translators: update type, like 'plugins' or 'themes' and the wordpress
+#. version
+#: cau_emails.php:72
+msgid "The following %1$s have not been tested with WordPress %2$s:"
+msgstr "以下の%1$sは WordPress %2$s でテストされていません:"
+
+#. translators: update type, like 'plugins' or 'themes' and site-url
+#: cau_emails.php:64
+msgid "You have %1$s on your WordPress site at %2$s that have not been tested with the latest 3 major releases of WordPress."
+msgstr "%1$s が WordPress サイト %2$s 上にありますが、WordPress の最近の3つのメジャーリリースでテストされていません。"
+
+#: admin/status.php:420
+msgid "We've fixed the error for you"
+msgstr "エラーを修正しました"
+
+#: admin/status.php:410
+msgid "We couldn't fix the error for you. Please contact us for further support"
+msgstr "エラーを修正できませんでした。私たちにサポートをお求めください。"
+
+#: admin/status.php:215
+msgid "A plugin has prevented updates by disabling wp_version_check"
+msgstr "wp_version_check の無効化により、プラグインの更新ができません"
+
+#: admin/status.php:187 admin/status.php:203
+msgid "Ignore this report"
+msgstr "この報告を無視"
+
+#: admin/status.php:154 admin/status.php:298
+msgid "How to fix this"
+msgstr "これを修正するには"
+
+#: admin/status.php:149
+msgid "All automatic updates are disabled"
+msgstr "すべての自動更新が無効化されています"
+
+#: admin/status.php:37
+msgid "This report will now be ignored"
+msgstr "この報告が無視されるようにしました"
+
+#: admin/dashboard.php:465
+msgid "For how many days should updates be put on hold?"
+msgstr "何日間、更新を保留しますか ?"
+
+#: admin/dashboard.php:462
+msgid "Number of days"
+msgstr "日数"
+
+#: admin/dashboard.php:456 admin/dashboard.php:458 admin/status.php:348
+msgid "Delay updates"
+msgstr "更新の遅延"
+
+#: admin/dashboard.php:318
+msgid "WordPress notifications"
+msgstr "WordPress の通知"
+
+#: admin/dashboard.php:309
+msgid "Show the time of the update"
+msgstr "更新時間を表示"
+
+#: admin/dashboard.php:306
+msgid "Show more info in emails"
+msgstr "メールに情報を追加"
+
+#: admin/dashboard.php:279
+msgid "Be notified of plugins that have not been tested with the 3 latest major versions of WordPress."
+msgstr "直近の3メジャーバージョンの WordPress でテストされていないプラグインを通知します。"
+
+#: admin/dashboard.php:422
+msgid "Outdated software"
+msgstr "古いソフトウェア"
+
+#: cau_functions.php:947
+msgid "Check the status page"
+msgstr "状態ページで確認"
+
+#: cau_functions.php:946
+msgid "For more information about this error check the status page."
+msgstr "このエラーの詳細は、状態ページでご確認ください。"
+
+#: admin/dashboard.php:452
+msgid "Author"
+msgstr "投稿者"
+
+#: admin/dashboard.php:451
+msgid "Editor"
+msgstr "編集者"
+
+#: admin/dashboard.php:450
+msgid "Administrator"
+msgstr "管理者"
+
+#: admin/dashboard.php:448
+msgid "Allow access to:"
+msgstr "アクセスの許可:"
+
+#: admin/status.php:147
+msgid "Auto updates"
+msgstr "自動更新"
+
+#: admin/status.php:197
+msgid "Cronjobs"
+msgstr "Cron のジョブ"
+
+#: admin/status.php:167
+msgid "Connection with WordPress.org"
+msgstr "WordPress.org との接続"
+
+#: admin/status.php:158 admin/status.php:169 admin/status.php:190
+#: admin/status.php:206 admin/status.php:218 cau_functions.php:996
+msgid "No issues detected"
+msgstr "問題の検出なし"
+
+#: cau_functions.php:992
+msgid "The folder %1$s was detected as being under version control (%2$s)"
+msgstr "フォルダー %1$s はバージョン管理されていることが検出されました (%2$s)"
+
+#: cau_functions.php:988
+msgid "The folder %1$s was detected as being under version control (%2$s), but the %3$s filter is allowing updates"
+msgstr "フォルダー %1$s はバージョン管理されていることが検出されましたが (%2$s)、%3$s 個別の管理では更新を許可しています"
+
+#: cau_functions.php:945
+msgid "Automatic updating is disabled on this site by either WordPress, another plugin or your webhost."
+msgstr "このサイトは、WordPress、別のプラグイン、利用中のウェブホストのいずれかで自動更新が無効化されています。"
+
+#: cau_functions.php:937
+msgid "Automatic updating isn't disabled on this site."
+msgstr "このサイトでは自動更新は無効になっていません。"
+
+#: cau_functions.php:934
+msgid "Security"
+msgstr "セキュリティ"
+
+#: cau_functions.php:919
+msgid "This was reported by the Companion Auto Update plugin"
+msgstr "これは Companion Auto Update プラグインにより報告されました"
+
+#: cau_functions.php:511
+msgid "Core translations"
+msgstr "コアの翻訳"
+
+#: cau_functions.php:493
+msgid "Theme translations"
+msgstr "テーマの翻訳"
+
+#: cau_functions.php:475
+msgid "Plugin translations"
+msgstr "プラグインの翻訳"
+
+#: admin/log.php:12
+msgid "Translations"
+msgstr "翻訳ファイル"
+
+#: admin/dashboard.php:17
+msgid "We need to add some information to your database"
+msgstr "データベースに情報を追加する必要があります"
+
+#. translators: number of days
+#: admin/status.php:111 admin/status.php:171 admin/status.php:199
+#: admin/status.php:351
+msgid "Disabled"
+msgstr "無効"
+
+#. translators: number of days
+#: admin/status.php:111 admin/status.php:351
+msgid "Enabled"
+msgstr "有効"
+
+#: admin/status.php:21
+msgid "Database information update completed"
+msgstr "データベース情報の更新完了"
+
+#: cau_functions.php:165 cau_functions.php:222 cau_functions.php:272
+#: cau_functions.php:408 cau_functions.php:443 cau_functions.php:537
+msgid "Manual"
+msgstr "手動"
+
+#: cau_functions.php:165 cau_functions.php:222 cau_functions.php:272
+#: cau_functions.php:408 cau_functions.php:443 cau_functions.php:537
+msgid "Automatic"
+msgstr "自動"
+
+#. translators: url to the wordpress update page
+#: cau_emails.php:121
+msgid "Head over to %1$s and check the ones you want to update."
+msgstr "%1$s にアクセスし、更新したいものをご確認ください。"
+
+#: cau_emails.php:116
+msgid "Leaving your site outdated is a security risk so please consider manually updating them."
+msgstr "お使いのサイトを古いままにしておくと、セキュリティ上のリスクがあります。手動で更新することをお考えください。"
+
+#. translators: update type, like 'plugins' or 'themes'
+#: cau_emails.php:104
+msgid "The following %1$s have new versions available."
+msgstr "以下の%1$sに最新版があります。"
+
+#. translators: update type, like 'plugins' or 'themes' and site-url
+#: cau_emails.php:97
+msgid "You have pending %1$s updates on your WordPress site at %2$s."
+msgstr "対象の WordPress サイト %2$s にて、 %1$sの更新が保留中です。"
+
+#: admin/status.php:315
+msgid "For when you need our help fixing an issue."
+msgstr "問題解決に私たちの支援が必要な場合に"
+
+#: admin/status.php:315
+msgid "Advanced info"
+msgstr "詳細情報"
+
+#: admin/dashboard.php:347
+msgid "Intervals"
+msgstr "間隔"
+
+#: admin/dashboard.php:300
+msgid "Use plain text"
+msgstr "普通のテキストを使用"
+
+#: admin/dashboard.php:299
+msgid "Use HTML"
+msgstr "HTMLを使用"
+
+#: admin/dashboard.php:295
+msgid "Use HTML in emails?"
+msgstr "HTML 形式のメール"
+
+#. translators: update type, like 'plugins' or 'themes'
+#: admin/pluginlist.php:43
+msgid "Prevent certain %1$s from updating automatically. %2$s that you select here will be skipped by Companion Auto Update and will require manual updating."
+msgstr "特定の%1$sの自動更新を防止します。ここで選択した%2$sは、Companion Auto Update による処理は省略され、手動の更新が必要です。"
+
+#: admin/dashboard.php:199 companion-auto-update.php:254
+msgid "Update filter"
+msgstr "個別の更新"
+
+#: cau_emails.php:405
+msgid "Release notes"
+msgstr "更新情報"
+
+#. translators: update type, like 'plugins' or 'themes'
+#: cau_emails.php:145
+msgid "The following %1$s have been updated:"
+msgstr "以下の%1$sが更新されました:"
+
+#: cau_emails.php:153
+msgid "(You'll also receive this email if you manually updated a plugin or theme)"
+msgstr "(プラグインやテーマを手動で更新した際もこのメールが届きます)"
+
+#: admin/status.php:16
+msgid "Database update completed"
+msgstr "データベース更新完了"
+
+#: admin/dashboard.php:11 admin/dashboard.php:17
+msgid "Run updater now"
+msgstr "すぐに更新実行"
+
+#: admin/dashboard.php:11
+msgid "We need you to update to the latest database version"
+msgstr "最新バージョンのデータベースに更新する必要があります"
+
+#: admin/dashboard.php:10 admin/dashboard.php:16
+msgid "Companion Auto Update Database Update"
+msgstr "Companion Auto Update データベース更新"
+
+#: cau_functions.php:578
+msgid "Update method"
+msgstr "更新方法"
+
+#: admin/status.php:268
+msgid "Timezone"
+msgstr "時間帯"
+
+#: admin/status.php:183
+msgid "You’ve chosen to discourage Search Engines from indexing your site. Auto-updating works best on sites with more traffic, consider enabling indexing for your site."
+msgstr "検索エンジンによるこのサイトのインデックスがあなたにより阻止されています。自動更新は、より多くのアクセスのあるサイトに最適です。インデックスの有効化をお考えください。"
+
+#: admin/dashboard.php:503
+msgid "Documentation"
+msgstr "文書"
+
+#: admin/dashboard.php:492
+msgid "Support Forums"
+msgstr "サポート掲示板"
+
+#: admin/dashboard.php:489
+msgid "Help"
+msgstr "ヘルプ"
+
+#: admin/dashboard.php:200
+msgid "More Actions"
+msgstr "他の行動"
+
+#: admin/dashboard.php:199
+msgid "Get Started"
+msgstr "始めてみよう"
+
+#: admin/dashboard.php:197
+msgid "The plugin is all set and ready to go with the recommended settings, but if you'd like you can change them below."
+msgstr "本プラグインの推奨する設定にて準備完了していますが、下記から変更することもできます。"
+
+#: admin/dashboard.php:196
+msgid "You're set and ready to go"
+msgstr "準備完了"
+
+#: admin/dashboard.php:194
+msgid "Welcome to Companion Auto Update"
+msgstr "Companion Auto Update へようこそ"
+
+#: admin/status.php:179
+msgid "Search Engine Visibility"
+msgstr "検索エンジンの表示"
+
+#: admin/status.php:153 admin/status.php:186
+msgid "Fix it"
+msgstr "修正"
+
+#: admin/dashboard.php:501
+msgid "Developer?"
+msgstr "開発者向け"
+
+#: companion-auto-update.php:415
+msgid "Companion Auto Update ran into a critical error. View the status log for more info."
+msgstr "Companion Auto Update に重大なエラーが発生しました。詳細は状態ログを参照してください。"
+
+#: admin/dashboard.php:491
+msgid "Frequently Asked Questions"
+msgstr "よくある質問"
+
+#: admin/status.php:202 admin/status.php:216
+msgid "Contact for support"
+msgstr "サポートの連絡先"
+
+#: admin/status.php:286
+msgid "Possible plugin issues"
+msgstr "プラグインの問題"
+
+#. translators: update type, like 'plugins' or 'themes' and site-url
+#: cau_emails.php:136
+msgid ""
+"One or more %1$s on your WordPress site at %2$s have been updated by Companion Auto Update. No further action is needed on your part. \n"
+"For more info on what is new visit your dashboard and check the changelog."
+msgstr ""
+"対象の WordPress サイト %2$s にて、Companion Auto Update により1つ以上の %1$s が更新されました。さらなる対応は不要です。\n"
+"新着情報の詳細については、管理画面から更新履歴をご覧ください。"
+
+#: cau_emails.php:480
+msgid "One or more themes have been updated."
+msgstr "1つ以上のテーマが更新されました。"
+
+#: admin/dashboard.php:513
+msgid "Check out our other plugins"
+msgstr "私たちの他のプラグイン"
+
+#: admin/status.php:236
+msgid "Systeminfo"
+msgstr "システム情報"
+
+#: admin/dashboard.php:431
+msgid "Advanced settings"
+msgstr "高度な設定"
+
+#: admin/status.php:57
+msgid "Core (Minor)"
+msgstr "コア (マイナーアップデート)"
+
+#: admin/status.php:58
+msgid "Core (Major)"
+msgstr "コア (メジャーアップデート)"
+
+#: admin/log.php:11 admin/pluginlist.php:10 admin/pluginlist.php:29
+#: admin/status.php:56
+msgid "Themes"
+msgstr "テーマ"
+
+#: admin/log.php:10 admin/pluginlist.php:15 admin/pluginlist.php:20
+#: admin/pluginlist.php:28 admin/status.php:55
+msgid "Plugins"
+msgstr "プラグイン"
+
+#: admin/status.php:89
+msgid "Next"
+msgstr "次回"
+
+#: admin/status.php:88
+msgid "Interval"
+msgstr "間隔"
+
+#: admin/dashboard.php:321
+msgid "Core notifications are handled by WordPress and not by this plugin. You can only disable them, changing your email address in the settings above will not affect these notifications."
+msgstr "コアの通知は WordPress により処理されており、本プラグインでは処理されません。設定としてはこれを無効にできるのみで、上記の設定からメールアドレスを変更しても、この通知に影響はありません。"
+
+#: admin/dashboard.php:519
+msgid "Companion Auto Update is free to use. It has required a great deal of time and effort to develop and you can help support this development by making a small donation.<br />You get useful software and we get to carry on making it better."
+msgstr "Companion Auto Update は無料でご利用いただけます。開発には多くの時間と労力がかかります。あなたの善意による少額の寄付によって開発をご支援ください。<br /> あなたは便利なソフトウェアを手にし、私たちは改良を継続できるようになります。"
+
+#: admin/dashboard.php:518
+msgid "Like our plugin?"
+msgstr "プラグインを気に入っていただけますか ?"
+
+#: admin/dashboard.php:495
+msgid "Want to contribute?"
+msgstr "貢献したいですか ?"
+
+#: admin/dashboard.php:512
+msgid "Contact us"
+msgstr "お問い合わせ"
+
+#: admin/dashboard.php:511
+msgid "Feel free to reach out to us if you have any questions or feedback."
+msgstr "ご質問やご意見がありましたら、お気軽にお声がけください。"
+
+#: admin/dashboard.php:510 cau_emails.php:406
+msgid "Support"
+msgstr "サポート"
+
+#: admin/log.php:9 companion-auto-update.php:299
+msgid "View full changelog"
+msgstr "すべての更新履歴を表示"
+
+#: companion-auto-update.php:297
+msgid "Below are the last 7 updates ran on this site. Includes plugins and themes, both automatically updated and manually updated."
+msgstr "以下は、過去7日間に実行された更新です。プラグイン・テーマは共に自動または手動で更新されました。"
+
+#: companion-auto-update.php:255 companion-auto-update.php:290
+msgid "Update log"
+msgstr "更新履歴"
+
+#: cau_functions.php:577
+msgid "Last updated on"
+msgstr "最終更新日"
+
+#: cau_functions.php:576
+msgid "Type"
+msgstr "種類"
+
+#: admin/pluginlist.php:107 cau_functions.php:574
+msgid "Name"
+msgstr "名前"
+
+#: admin/dashboard.php:380
+msgid "At what time should the updater run? Only works when set to <u>daily</u>."
+msgstr "いつ更新しますか ? <u>毎日</u>に設定された場合にのみ実行されます。"
+
+#: admin/dashboard.php:380
+msgid "Time notation: 24H"
+msgstr "時間表記: 24時間"
+
+#: admin/pluginlist.php:108 admin/status.php:87 admin/status.php:138
+#: companion-auto-update.php:256
+msgid "Status"
+msgstr "状態"
+
+#. Author of the plugin
+#: companion-auto-update.php
+msgid "Papin Schipper"
+msgstr "Papin Schipper"
+
+#: admin/dashboard.php:524 companion-auto-update.php:330
+msgid "Donate to help development"
+msgstr "開発支援のために寄付する"
+
+#: admin/dashboard.php:200 admin/dashboard.php:497
+#: companion-auto-update.php:329
+msgid "Help us translate"
+msgstr "翻訳にご協力ください"
+
+#: admin/dashboard.php:200
+msgid "Give feedback"
+msgstr "ご意見をお寄せください"
+
+#: admin/dashboard.php:328
+msgid "By default WordPress sends an email when a core update has occurred. Uncheck this box to disable these emails."
+msgstr "WordPress のコアシステムが更新された際に WordPress に設定されたメールアドレス宛へ通知します。チェックを外すと通知は無効になります。"
+
+#: admin/dashboard.php:406
+msgid "Core update interval"
+msgstr "WordPress コアの更新間隔"
+
+#: admin/dashboard.php:399
+msgid "Theme update interval"
+msgstr "テーマの更新間隔"
+
+#: admin/dashboard.php:392
+msgid "Plugin update interval"
+msgstr "プラグインの更新間隔"
+
+#: cau_functions.php:931
+msgid "Auto updating is enabled"
+msgstr "自動更新有効"
+
+#: admin/pluginlist.php:109
+msgid "Description"
+msgstr "説明"
+
+#: admin/pluginlist.php:100 admin/pluginlist.php:189
+msgid "Reset list"
+msgstr "初期化"
+
+#. translators: update type, like 'plugins' or 'themes'
+#: admin/pluginlist.php:89
+msgid "The no-update-list has been reset, all %s will be auto-updated from now on"
+msgstr "更新しない一覧が初期化されました。今後、すべての%sは自動更新されます"
+
+#. translators: number of items and update type (like 'plugins' or 'themes')
+#: admin/pluginlist.php:76
+msgid "%1$s %2$s have been added to the no-update-list"
+msgstr "%1$s個の%2$sが更新しない一覧に追加されました"
+
+#: admin/pluginlist.php:74 admin/pluginlist.php:87
+msgid "Succes"
+msgstr "成功"
+
+#: cau_functions.php:944
+msgid "Auto updating is disabled"
+msgstr "自動更新無効"
+
+#: admin/status.php:61
+msgid "Core notifications"
+msgstr "コアの通知"
+
+#: admin/dashboard.php:236
+msgid "Auto update translation files?"
+msgstr "翻訳ファイルの自動更新"
+
+#: companion-auto-update.php:253
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+#: admin/dashboard.php:266
+msgid "Send me emails when something has been updated."
+msgstr "何かが更新されればメールで通知します。"
+
+#: admin/status.php:60
+msgid "Successful update"
+msgstr "更新の成功時"
+
+#: admin/status.php:59
+msgid "Update available"
+msgstr "最新版がある時"
+
+#: admin/dashboard.php:249
+msgid "Email Notifications"
+msgstr "メール通知"
+
+#: cau_emails.php:462
+msgid "One or more plugins have been updated."
+msgstr "1つ以上のプラグインが更新されました。"
+
+#: cau_functions.php:575
+msgid "To version"
+msgstr "更新後のバージョン"
+
+#: cau_emails.php:168 cau_emails.php:259 cau_emails.php:463
+msgid "plugins"
+msgstr "プラグイン"
+
+#: cau_emails.php:167 cau_emails.php:258
+msgid "plugin"
+msgstr "プラグイン"
+
+#: cau_emails.php:257
+msgid "Plugin update available."
+msgstr "プラグインの最新版があります。"
+
+#: cau_emails.php:209 cau_emails.php:481
+msgid "themes"
+msgstr "テーマ"
+
+#: cau_emails.php:208
+msgid "theme"
+msgstr "テーマ"
+
+#: cau_emails.php:207
+msgid "Theme update available."
+msgstr "プラグインの最新版があります。"
+
+#: admin/dashboard.php:5
+msgid "Companion Auto Update was not able to set the event for sending you emails, please re-activate the plugin in order to set the event"
+msgstr "Companion Auto Update は、メール送信のイベントを設定できませんでした。イベントを設定するには本プラグインを再び有効化してください"
+
+#: admin/dashboard.php:291
+msgid "Seperate email addresses using commas."
+msgstr "複数のアドレスはカンマ区切りにします。"
+
+#: admin/dashboard.php:287
+msgid "To"
+msgstr "宛先"
+
+#: admin/dashboard.php:284
+msgid "Email Address"
+msgstr "メールアドレス"
+
+#: admin/dashboard.php:270
+msgid "Send me emails when an update is available."
+msgstr "最新版があればメールで通知します。"
+
+#: admin/dashboard.php:235 admin/status.php:78
+msgid "Auto update major core updates?"
+msgstr "WordPress コアの大きな改善 (メジャーバージョン) を自動更新"
+
+#: admin/dashboard.php:234 admin/status.php:77
+msgid "Auto update minor core updates?"
+msgstr "WordPress コアの小さな改善 (マイナーバージョン) を自動更新"
+
+#: admin/dashboard.php:233 admin/status.php:76
+msgid "Auto update themes?"
+msgstr "テーマの自動更新"
+
+#: admin/dashboard.php:232 admin/status.php:75
+msgid "Auto update plugins?"
+msgstr "プラグインの自動更新"
+
+#: companion-auto-update.php:299 companion-auto-update.php:328
+msgid "Settings"
+msgstr "設定"
+
+#: admin/dashboard.php:184
+msgid "Settings saved."
+msgstr "設定を保存しました。"
+
+#: admin/dashboard.php:217 admin/pluginlist.php:170
+#: companion-auto-update.php:237
+msgid "Auto Updater"
+msgstr "Auto Updater"
+
+#. Description of the plugin
+#: companion-auto-update.php
+msgid "This plugin auto updates all plugins, all themes and the wordpress core."
+msgstr "本プラグインはすべてのプラグイン、テーマ、Wordpress コアを自動更新します。"
+
+#. Plugin Name of the plugin
+#: companion-auto-update.php cau_functions.php:923
+#: companion-auto-update.php:245
+msgid "Companion Auto Update"
+msgstr "Companion Auto Update"

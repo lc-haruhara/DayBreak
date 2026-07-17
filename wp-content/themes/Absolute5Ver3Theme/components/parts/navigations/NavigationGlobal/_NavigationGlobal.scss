@@ -1,0 +1,36 @@
+@use "foundation/index" as *;
+
+.c-navigation-global {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 999990;
+
+  @include Breakpoint(inch11) {
+    display: none;
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Body
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-body {
+    @include Flex(left, center, 1rem);
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 List
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-navigation-global-list {
+  @include Flex(left, center, 1rem);
+  padding: 0.5em 1em;
+  background: #fff;
+  @include FontStyle(s);
+
+  .item-body {
+    display: inline-block;
+    padding: 0.5em 1em;
+  }
+}

@@ -1,0 +1,507 @@
+# Translation of Themes - Twenty Ten in Japanese
+# This file is distributed under the same license as the Themes - Twenty Ten package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-02-04 23:41:23+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Themes - Twenty Ten\n"
+
+#. Description of the theme
+#: style.css
+#, gp-priority: high
+msgid "The 2010 theme for WordPress is stylish, customizable, simple, and readable -- make it yours with a custom menu, header image, and background. Twenty Ten supports six widgetized areas (two in the sidebar, four in the footer) and featured images (thumbnails for gallery posts and custom header images for posts and pages). It includes stylesheets for print and the admin Visual Editor, special styles for posts in the \"Asides\" and \"Gallery\" categories, and has an optional one-column page template that removes the sidebar."
+msgstr "2010年版の WordPress テーマ「Twenty Ten」は、スタイリッシュで、カスタマイズ可能で、簡潔で、読みやすいデザインです。カスタムメニュー、ヘッダー画像、背景をあなたなりにアレンジしてみてください。Twenty Ten テーマでは6つのウィジェットエリア (サイドバーに2つ、フッターに4つ) と、アイキャッチ画像 (ギャラリー投稿のサムネイルと、投稿やページのカスタムヘッダー画像) に対応しています。印刷用、管理画面のビジュアルエディター用、アサイドおよびギャラリーカテゴリー用のスタイルシートが用意されています。また、サイドバーを取り去った1カラムページのテンプレートもあります。"
+
+#. Theme Name of the theme
+#: style.css block-patterns.php:20
+#, gp-priority: high
+msgid "Twenty Ten"
+msgstr "Twenty Ten"
+
+#: block-patterns.php:58
+msgid "Relaxing at the lake after dinner"
+msgstr "夕食後に湖でくつろぐ"
+
+#: block-patterns.php:58
+msgid "A lake at night, with Adirondack chairs in the foreground. The sun sets in the background."
+msgstr "手前にアディロンダックチェアが置かれた夜の湖。背景で夕日が沈んでいます。"
+
+#: block-patterns.php:58
+msgid "Later that night, we went back to the lake and sat by the shore. It felt different at night; quieter, as if all of nature had gone to sleep for  a little while. The only noises were the chirp of crickets and the soft splash of the waves lapping at the shore. What a beautiful way to end the day."
+msgstr "その夜に後ほど、私たちは再び湖に行き、湖畔に座りました。夜になると感じが変わりました。もっと静かで、まるでしばらく自然が眠ってしまったかのようでした。聞こえるのはコオロギの鳴き声と、岸辺に打ち寄せる波の柔らかな音だけ。なんて美しい一日の終え方でしょうか。"
+
+#: block-patterns.php:58
+msgid "Nearby our cabin was a lake. The sunrise looked beautiful as it rose over the hills beyond the water, reflecting down onto the gentle morning waves. I sat on the dock and drank a cup of coffee, enjoying the cool air on my skin. The coffee kept me warm inside."
+msgstr "キャビンの近くには湖がありました。湖の向こうの丘から昇ってくる朝日が、朝の穏やかな波に反射して美しく見えました。私は波止場に座ってコーヒーを一杯飲みながら、肌に感じる冷たい空気を楽しみました。コーヒーが体を温めてくれました。"
+
+#: block-patterns.php:58
+msgid "The lake at 6:54 AM"
+msgstr "午前6時54分の湖"
+
+#: block-patterns.php:58
+msgid "A lake with several boats docked. The sun is rising behind mountains in the background."
+msgstr "数隻のボートが停泊している湖。背景にある山の向こうに太陽が昇っています。"
+
+#: block-patterns.php:55
+msgid "Alternating Images"
+msgstr "画像を交互に表示"
+
+#: block-patterns.php:47
+msgid "— Malebo Sephodi"
+msgstr "— マレボ・セフォディ"
+
+#: block-patterns.php:47
+msgid "\"Take time off&hellip; The world will not fall apart without you.\""
+msgstr "「休んでみましょう。あなたがいなくても、世界は崩壊しません。」"
+
+#: block-patterns.php:44
+msgid "Highlighted Quote"
+msgstr "強調引用"
+
+#: block-patterns.php:36
+msgid "It’s amazing what a good weekend can do. After a tough couple weeks at work, I knew I needed to get away and be in nature. My partner and I decided to take a long weekend and stay in a cabin in the woods. We packed up after work on Friday and drove out into the country, passing through fields full of horses, old farms, and quaint little town squares. It was an idyllic drive. Eventually, we reached our destination and unpacked the car. We couldn’t wait to cook up a simple dinner and then relax by the fireplace."
+msgstr "数週間ほど仕事で大変な思いをした後、私はどこかに行って自然の中に身を置く必要があると思いました。パートナーと私は長い週末を取り、森の中のキャビンに滞在することにしました。金曜日に仕事を終えて荷造りし、田舎に向かって車を走らせました。馬がたくさんいる野原や古い農場、趣のある小さな町の広場を通り抜けました。それは牧歌的なドライブでした。やがて目的地に到着し、車から荷物を降ろしました。簡単な夕食を作って、暖炉のそばでくつろぐのが待ちきれませんでした。"
+
+#: block-patterns.php:36
+msgid "A Weekend Away"
+msgstr "週末のお出かけ"
+
+#: block-patterns.php:36
+msgid "An old barn we passed on the drive"
+msgstr "ドライブ中に通った古い納屋"
+
+#: block-patterns.php:36
+msgid "A red barn with a white roof in a field."
+msgstr "畑の中にある白い屋根の赤い納屋。"
+
+#: block-patterns.php:33
+msgid "Introduction"
+msgstr "はじめに"
+
+#. translators: %s: Post title.
+#: loop-attachment.php:27
+msgid "Go to %s"
+msgstr "%s へ移動"
+
+#: functions.php:480
+msgid "Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved."
+msgstr "あなたのコメントは管理者の承認待ちです。これはプレビューで、コメントは承認後に表示されます。"
+
+#. translators: %s: The post title.
+#: comments.php:40
+msgid "One Response to %s"
+msgstr "%s への1件のコメント"
+
+#: functions.php:112
+msgid "White"
+msgstr "白"
+
+#: functions.php:107
+msgid "Light Gray"
+msgstr "ライトグレー"
+
+#: functions.php:102
+msgid "Medium Gray"
+msgstr "グレー"
+
+#: functions.php:97
+msgid "Black"
+msgstr "黒"
+
+#: functions.php:92
+msgid "Blue"
+msgstr "ブルー"
+
+#. Template Name of the theme
+msgid "One column, no sidebar"
+msgstr "1カラム、サイドバーなし"
+
+#. translators: %s: Tag title.
+#: tag.php:18
+msgid "Tag Archives: %s"
+msgstr "「%s」タグアーカイブ"
+
+#: sidebar.php:36
+msgid "Meta"
+msgstr "メタ情報"
+
+#: sidebar.php:29
+msgid "Archives"
+msgstr "アーカイブ"
+
+#: search.php:34
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索してみてください。"
+
+#: search.php:32
+msgid "Nothing Found"
+msgstr "見つかりません"
+
+#. translators: %s: Search query.
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr "検索結果: %s"
+
+#. translators: 1: CSS classes, 2: Category list.
+#: loop.php:201
+msgid "<span class=\"%1$s\">Tagged</span> %2$s"
+msgstr "<span class=\"%1$s\">タグ:</span> %2$s"
+
+#. translators: 1: CSS classes, 2: Category list.
+#: loop.php:188
+msgid "<span class=\"%1$s\">Posted in</span> %2$s"
+msgstr "<span class=\"%1$s\">カテゴリー:</span> %2$s"
+
+#: loop.php:134
+msgctxt "asides category slug"
+msgid "asides"
+msgstr "アサイド"
+
+#: loop.php:127 loop.php:150 loop.php:207
+msgid "% Comments"
+msgstr "%件のコメント"
+
+#: loop.php:127 loop.php:150 loop.php:207
+msgid "1 Comment"
+msgstr "1件のコメント"
+
+#: loop.php:127 loop.php:150 loop.php:207
+msgid "Leave a comment"
+msgstr "コメントする"
+
+#: loop.php:124
+msgid "View posts in the Gallery category"
+msgstr "ギャラリーカテゴリーの投稿を表示"
+
+#: loop.php:121 loop.php:124
+msgid "More Galleries"
+msgstr "その他のギャラリー"
+
+#: loop.php:121
+msgid "View Galleries"
+msgstr "ギャラリーを表示"
+
+#. translators: %s: Post title.
+#: loop.php:106
+msgid "Permalink to %s"
+msgstr "%s へのパーマリンク"
+
+#. translators: 1: HTML tag attributes, 2: Image count.
+#: loop.php:104
+msgid "This gallery contains <a %1$s>%2$s photo</a>."
+msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+msgstr[0] "このギャラリーには<a %1$s>%2$s枚の写真</a>が含まれています。"
+
+#: loop.php:79 loop.php:118
+msgctxt "gallery category slug"
+msgid "gallery"
+msgstr "gallery"
+
+#: loop.php:49
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "リクエストされたアーカイブには何も見つかりませんでした。検索すれば関連投稿が見つかるかもしれません。"
+
+#: loop.php:27
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "新しい投稿 <span class=\"meta-nav\">&rarr;</span>"
+
+#: loop.php:28
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 過去の投稿"
+
+#. translators: %s: Author display name.
+#: loop-single.php:69
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%s の投稿をすべて表示 <span class=\"meta-nav\">&rarr;</span>"
+
+#: loop-single.php:26 loop-single.php:85
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: loop-single.php:25 loop-single.php:84
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: loop-attachment.php:166 loop-page.php:36 loop-single.php:41 loop.php:175
+msgid "Pages:"
+msgstr "ページ:"
+
+#: loop-attachment.php:83 loop-attachment.php:176 loop-page.php:41
+#: loop-single.php:79 loop.php:128 loop.php:151 loop.php:209
+msgid "Edit"
+msgstr "編集"
+
+#: loop-attachment.php:76
+msgid "Link to full-size image"
+msgstr "フルサイズ画像へのリンク"
+
+#. translators: %s: Image dimensions.
+#: loop-attachment.php:72
+msgid "Full size is %s pixels"
+msgstr "フルサイズ: %sピクセル"
+
+#. translators: 1: CSS classes, 2: Date.
+#: loop-attachment.php:59
+msgid "<span class=\"%1$s\">Published</span> %2$s"
+msgstr "<span class=\"%1$s\">公開日:</span> %2$s"
+
+#. translators: %s: Author display name.
+#: loop-attachment.php:44
+msgid "<span class=\"%1$s\">By</span> %2$s"
+msgstr "<span class=\"%1$s\">投稿者:</span> %2$s"
+
+#. translators: %s: Title of parent post.
+#: loop-attachment.php:32
+msgid "<span class=\"meta-nav\">&larr;</span> %s"
+msgstr "<span class=\"meta-nav\">&larr;</span> %s"
+
+#: header.php:67
+msgid "Skip to content"
+msgstr "コンテンツへスキップ"
+
+#. translators: %s: Page number.
+#: header.php:36
+msgid "Page %s"
+msgstr "ページ %s"
+
+#. translators: 3: Post permalink, 4: Post title.
+#: functions.php:685
+msgid "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "<a href=\"%3$s\" title=\"%4$s へのパーマリンク\" rel=\"bookmark\">パーマリンク</a>"
+
+#. translators: 1: Category name, 3: Post permalink, 4: Post title.
+#: functions.php:682
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "カテゴリー: %1$s <a href=\"%3$s\" title=\"%4$s へのパーマリンク\" rel=\"bookmark\">パーマリンク</a>"
+
+#. translators: 1: Category name, 2: Tag name, 3: Post permalink, 4: Post
+#. title.
+#: functions.php:679
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "カテゴリー: %1$s タグ: %2$s <a href=\"%3$s\" title=\"%4$s へのパーマリンク\" rel=\"bookmark\">パーマリンク</a>"
+
+#. translators: %s: Author display name.
+#: functions.php:660 loop-attachment.php:50
+msgid "View all posts by %s"
+msgstr "%s の投稿をすべて表示"
+
+#. translators: 1: CSS classes, 2: Date, 3: Author display name.
+#: functions.php:648
+msgid "<span class=\"%1$s\">Posted on</span> %2$s <span class=\"meta-sep\">by</span> %3$s"
+msgstr "<span class=\"%1$s\">投稿日:</span> %2$s <span class=\"meta-sep\">作成者:</span> %3$s"
+
+#: functions.php:609
+msgid "Fourth Footer Widget Area"
+msgstr "フッターウィジェットエリア 4"
+
+#: functions.php:596
+msgid "Third Footer Widget Area"
+msgstr "フッターウィジェットエリア 3"
+
+#: functions.php:583
+msgid "Second Footer Widget Area"
+msgstr "フッターウィジェットエリア 2"
+
+#: functions.php:572 functions.php:585 functions.php:598 functions.php:611
+msgid "An optional widget area for your site footer."
+msgstr "サイトフッター用のオプションウィジェットエリア。"
+
+#: functions.php:570
+msgid "First Footer Widget Area"
+msgstr "フッターウィジェットエリア 1"
+
+#: functions.php:559
+msgid "An optional secondary widget area, displays below the primary widget area in your sidebar."
+msgstr "サイドバーのメインウィジェットエリアの下に表示される2つめのオプションウィジェットエリア。"
+
+#: functions.php:557
+msgid "Secondary Widget Area"
+msgstr "ウィジェットエリア2"
+
+#: functions.php:546
+msgid "Add widgets here to appear in your sidebar."
+msgstr "サイドバーに表示されるウィジェットを追加できます。"
+
+#: functions.php:544
+msgid "Primary Widget Area"
+msgstr "ウィジェットエリア1"
+
+#: functions.php:523
+msgid "Pingback:"
+msgstr "ピンバック:"
+
+#: functions.php:496 functions.php:523
+msgid "(Edit)"
+msgstr "(編集)"
+
+#. translators: 1: Date, 2: Time.
+#: functions.php:492
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: functions.php:478
+msgid "Your comment is awaiting moderation."
+msgstr "あなたのコメントは承認待ちです。"
+
+#. translators: %s: Author display name.
+#: functions.php:471
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">のコメント:</span>"
+
+#: functions.php:369 loop-attachment.php:162 loop.php:143 loop.php:171
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "続きを読む <span class=\"meta-nav\">&rarr;</span>"
+
+#. translators: Header image description.
+#: functions.php:261
+msgid "Sunset"
+msgstr "サンセット"
+
+#. translators: Header image description.
+#: functions.php:255
+msgid "Path"
+msgstr "パス"
+
+#. translators: Header image description.
+#: functions.php:249
+msgid "Inkwell"
+msgstr "インクウェル"
+
+#. translators: Header image description.
+#: functions.php:243
+msgid "Forest Floor"
+msgstr "フォレスト・フロア"
+
+#. translators: Header image description.
+#: functions.php:237
+msgid "Fern"
+msgstr "シダ"
+
+#. translators: Header image description.
+#: functions.php:231
+msgid "Concave"
+msgstr "凹面"
+
+#. translators: Header image description.
+#: functions.php:225
+msgid "Cherry Blossoms"
+msgstr "桜"
+
+#. translators: Header image description.
+#: functions.php:219
+msgid "Berries"
+msgstr "ベリー"
+
+#: functions.php:144
+msgid "Primary Navigation"
+msgstr "メインナビゲーション"
+
+#. translators: %s: WordPress
+#: footer.php:49
+msgid "Proudly powered by %s."
+msgstr "Proudly powered by %s."
+
+#: footer.php:46
+msgid "Semantic Personal Publishing Platform"
+msgstr "セマンティックなパブリッシングツール"
+
+#: comments.php:88
+msgid "Comments are closed."
+msgstr "コメントは停止中です。"
+
+#: comments.php:57 comments.php:77
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "新しいコメント <span class=\"meta-nav\">&rarr;</span>"
+
+#: comments.php:56 comments.php:76
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> 古いコメント"
+
+#. translators: 1: The number of comments, 2: The post title.
+#: comments.php:46
+msgid "%1$s Response to %2$s"
+msgid_plural "%1$s Responses to %2$s"
+msgstr[0] "%2$s への%1$s件のフィードバック"
+
+#: comments.php:18
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "この投稿はパスワードで保護されています。コメントを表示するにはパスワードを入力してください。"
+
+#. translators: %s: Category title.
+#: category.php:18
+msgid "Category Archives: %s"
+msgstr "「%s」カテゴリーアーカイブ"
+
+#. translators: %s: Author display name.
+#: author.php:58 loop-single.php:61
+msgid "About %s"
+msgstr "%s について"
+
+#. translators: %s: Author display name.
+#: author.php:32
+msgid "Author Archives: %s"
+msgstr "投稿者「%s」のアーカイブ"
+
+#: archive.php:45
+msgid "Blog Archives"
+msgstr "ブログアーカイブ"
+
+#. translators: %s: Date.
+#: archive.php:43
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y年"
+
+#. translators: %s: Date.
+#: archive.php:43
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "年別アーカイブ: <span>%s</span>"
+
+#. translators: %s: Date.
+#: archive.php:40
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "Y年n月"
+
+#. translators: %s: Date.
+#: archive.php:40
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "月別アーカイブ: <span>%s</span>"
+
+#. translators: %s: Date.
+#: archive.php:37
+msgid "Daily Archives: <span>%s</span>"
+msgstr "日別アーカイブ: <span>%s</span>"
+
+#: 404.php:18
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
+msgstr "リクエストされたページが存在しません。検索で見つかるかもしれません。"
+
+#: 404.php:16 loop.php:47
+msgid "Not Found"
+msgstr "見つかりません"
+
+#. Author URI of the theme
+#: style.css footer.php:46
+#, gp-priority: low
+msgid "https://wordpress.org/"
+msgstr "https://ja.wordpress.org/"
+
+#. Author of the theme
+#: style.css
+#, gp-priority: low
+msgid "the WordPress team"
+msgstr "WordPress チーム"
+
+#. Theme URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://wordpress.org/themes/twentyten/"
+msgstr "https://wordpress.org/themes/twentyten/"

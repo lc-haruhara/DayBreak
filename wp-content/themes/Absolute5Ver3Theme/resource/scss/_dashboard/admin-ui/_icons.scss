@@ -1,0 +1,249 @@
+.wp-admin #wpadminbar .ab-item::before,
+.wp-admin #wpadminbar .ab-icon::before,
+#adminmenu div.wp-menu-image::before {
+  font-size: 20px;
+  font-variation-settings: "wght" 200; // Sharp スタイルの weight 200 //
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::://
+//                                            //
+// 🍔 アドミンバー
+//                                            //
+// ::::::::::::::::::::::::::::::::::::::::::://
+
+// WordPress Icon //
+#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon::before {
+  font-family: dashicons !important;
+}
+
+// Home //
+.wp-admin #wpadminbar #wp-admin-bar-site-name > .ab-item::before {
+  top: 2px;
+  font-family: "Material Symbols Sharp" !important;
+  content: "home";
+}
+
+// Edit //
+#wpadminbar #wp-admin-bar-new-content .ab-icon::before {
+  top: 2px;
+  font-family: "Material Symbols Sharp" !important;
+  content: "edit_square";
+}
+
+// Menu //
+#wpadminbar #wp-admin-bar-menu-toggle .ab-icon::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "menu";
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::://
+//                                            //
+// 🍔 サイドメニュー
+//                                            //
+// ::::::::::::::::::::::::::::::::::::::::::://
+
+// ダッシュボード //
+.dashicons-dashboard::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "dashboard";
+}
+
+// メディア //
+.dashicons-admin-media::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "photo_library";
+}
+
+// 固定ページ //
+.dashicons-admin-page::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "description";
+}
+
+// 投稿 //
+.dashicons-admin-post::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "edit_note";
+}
+
+// コメント //
+#wpadminbar #wp-admin-bar-comments .ab-icon::before,
+.dashicons-admin-comments::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "chat_bubble";
+}
+
+// ユーザー //
+.dashicons-admin-users::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "group";
+}
+
+// 外観 //
+.dashicons-admin-appearance::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "web_asset";
+}
+
+// ツール //
+.dashicons-admin-tools::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "build";
+}
+
+// 設定 //
+.dashicons-admin-settings::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "tune";
+}
+
+// プラグイン //
+.dashicons-admin-plugins::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "extension";
+}
+
+// お問い合わせ //
+.dashicons-email::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "mail";
+}
+
+// ACF //
+.dashicons-welcome-widgets-menus::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "forms_add_on";
+}
+
+// CPT UI //
+.dashicons-forms::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "widget_medium";
+}
+
+// Menu Editor //
+.dashicons-admin-generic::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "list";
+}
+
+// Database //
+.dashicons-database::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "database";
+}
+
+// Duplicate //
+.dashicons-media-default::before,
+#adminmenu#adminmenu#adminmenu
+  a.ame-has-custom-dashicon
+  .dashicons-media-default::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "file_copy" !important;
+}
+
+// GoogleRecaptcha //
+.dashicons-shield::before,
+#adminmenu#adminmenu#adminmenu
+  a.ame-has-custom-dashicon
+  .dashicons-shield::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "security" !important;
+}
+
+// コメント無効/有効 //
+.dashicons-welcome-comments::before,
+#adminmenu#adminmenu#adminmenu
+  a.ame-has-custom-dashicon
+  .dashicons-welcome-comments::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "chat_error" !important;
+}
+
+// database //
+.dashicons-database::before,
+#adminmenu#adminmenu#adminmenu
+  a.ame-has-custom-dashicon
+  .dashicons-database::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "database" !important;
+}
+
+// 並び替え //
+.dashicons-randomize::before,
+#adminmenu#adminmenu#adminmenu
+  a.ame-has-custom-dashicon
+  .dashicons-randomize::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "swap_vert" !important;
+}
+
+// アップデート //
+.dashicons-update::before,
+#adminmenu#adminmenu#adminmenu
+  a.ame-has-custom-dashicon
+  .dashicons-update::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "update" !important;
+}
+
+// SSL //
+.dashicons-lock::before,
+#adminmenu#adminmenu#adminmenu
+  a.ame-has-custom-dashicon
+  .dashicons-lock::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "lock" !important;
+}
+
+// ログイン画面隠蔽 //
+.dashicons-admin-network::before,
+#adminmenu#adminmenu#adminmenu
+  a.ame-has-custom-dashicon
+  .dashicons-admin-network::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "domino_mask" !important;
+}
+
+// 操作マニュアル //
+.dashicons-book::before,
+#adminmenu#adminmenu#adminmenu
+  a.ame-has-custom-dashicon
+  .dashicons-book::before {
+  font-family: "Material Symbols Sharp" !important;
+  content: "book" !important;
+}
+
+// メニューを閉じる //
+#collapse-button .collapse-button-icon::after {
+  font-family: "Material Symbols Sharp" !important;
+  font-variation-settings: "wght" 200; // Sharp スタイルの weight 200 //
+  content: "arrow_circle_left";
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::://
+//                                            //
+// 🍔 ACF関連
+//                                            //
+// ::::::::::::::::::::::::::::::::::::::::::://
+@mixin AcfIconStyle {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  margin: auto;
+  font-family: "Material Symbols Sharp" !important;
+  font-size: 20px;
+  opacity: 0.5;
+  translate: 0 -50%;
+}
+
+.acf-internal-post-type i.acf-icon,
+.post-type-acf-field-group i.acf-icon {
+  // background: none !important;
+}
+
+// URL --------------------
+.acf-input-wrap.acf-url::before {
+  @include AcfIconStyle();
+  content: "public";
+}

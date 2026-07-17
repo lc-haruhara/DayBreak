@@ -1,0 +1,805 @@
+@charset "utf-8";
+@use "foundation/index" as *;
+@use "../../../../pages/singles/singles-common" as *;
+
+$Primary: #3d33ff;
+$Secondary-Light: #eaedf5;
+$Secondary: #9ea7bf;
+$Background: #212631;
+$Border: rgba(
+  $color: #000000,
+  $alpha: 0.1,
+);
+$Error: #e74062;
+
+@mixin InputStyle {
+  padding: 1rem 1rem;
+  background: #fff;
+  border: 1px solid color(border);
+  border-radius: 0;
+  border-radius: 3px;
+  @include FontStyle(m);
+
+  &:focus {
+    outline: none;
+    border: 1px solid $Primary;
+    box-shadow: none;
+  }
+}
+
+@mixin ButtonCommonStyle {
+  display: inline-block;
+  height: auto;
+  margin: 0;
+  font-size: 13px !important;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  transition: 0.25s ease;
+
+  * {
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+@mixin ButtonPrimaryStyle {
+  @include ButtonCommonStyle();
+  padding: 1rem 2rem;
+  color: #fff;
+  background: $Primary;
+  border: none;
+  border-radius: 50px;
+  box-shadow: none;
+
+  * {
+    width: auto;
+    padding: 0;
+    font-weight: 700;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@mixin ButtonGhostStyle {
+  @include ButtonCommonStyle();
+  padding: calc(1rem - 4px) 2rem;
+  color: $Secondary;
+  background: #fff;
+  border: 2px solid $Secondary;
+  border-radius: 4px;
+
+  * {
+    width: auto;
+    padding: 0;
+    font-weight: 700;
+    color: $Secondary;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@mixin ButtonErrorStyle {
+  @include ButtonCommonStyle();
+  padding: 1rem 2rem;
+  color: #e74062;
+  text-decoration: none;
+  background: none;
+}
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+//	🍔 PageLayout
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.acf-group-group_62cd2efb18fb6 {
+  a {
+    color: $Primary;
+    outline: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  #post-body {
+    @include Flex(left, null);
+    flex-direction: column;
+    margin-right: 0 !important;
+  }
+
+  #postbox-container-1 {
+    float: none !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+
+    #side-sortables {
+      @include Flex;
+
+      #postimagediv {
+        @include FlexItem(2);
+        order: 1;
+      }
+
+      #submitdiv {
+        @include FlexItem(2);
+        order: 2;
+      }
+    }
+  }
+
+  #wpseo_meta {
+    @include FlexItem(2);
+  }
+
+  #side-sortables {
+    width: 100% !important;
+  }
+
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // ✅ 公開ボタン
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  #major-publishing-actions {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 99998;
+    box-sizing: border-box;
+    width: calc(100% - 160px);
+    padding: 1rem;
+    pointer-events: none;
+    background: none;
+    border: none;
+    @include Flex;
+
+    #publish {
+      @include ButtonPrimaryStyle();
+    }
+
+    #publishing-action {
+      margin-left: auto;
+      pointer-events: auto;
+    }
+
+    #delete-action {
+      pointer-events: auto;
+
+      a {
+        @include ButtonGhostStyle;
+      }
+    }
+  }
+
+  #publishing-action .spinner {
+    margin-top: 12px;
+  }
+
+  #preview-action {
+    position: fixed;
+    bottom: 20px;
+    left: 21rem;
+    z-index: 99999;
+
+    #post-preview {
+      @include ButtonGhostStyle;
+    }
+  }
+
+  #misc-publishing-actions {
+    .misc-pub-section.misc-pub-post-status {
+      position: fixed;
+      right: 9.5rem;
+      bottom: 20px;
+      z-index: 99999;
+      padding: 11px 1rem;
+      background: #fff;
+      border: 1px solid color(border);
+    }
+  }
+
+  #rewrite-republish-action,
+  #duplicate-action {
+    display: none;
+  }
+
+  #rewrite-republish-action + #delete-action {
+    margin-top: 0;
+  }
+}
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+//	🍔 FlexibleContents
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#acf-group_62cd2efb18fb6 {
+  width: 100%;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+  background: none;
+  border: none;
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  //	🍔 Common
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  * {
+    background: none;
+    border: none;
+  }
+
+  & > .inside.acf-fields.-top {
+    width: min(100%, 1000px);
+    margin: auto !important;
+  }
+
+  label[for="acf-field_62cd2effa5d1b"],
+  & > .postbox-header {
+    display: none;
+  }
+
+  .acf-fields > .acf-field {
+    padding: 0;
+  }
+
+  .acf-flexible-content .layout + .layout {
+    margin-top: 8rem;
+  }
+
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // ✅ Heading
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  .acf-flexible-content .layout .acf-fc-layout-handle {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: $Secondary;
+    background: $Secondary-Light;
+  }
+
+  .acf-flexible-content .layout .acf-fc-layout-order {
+    display: none;
+  }
+
+  .acf-flexible-content .layout .acf-fc-layout-controls {
+    top: 28px;
+  }
+
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // ✅ Input
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  textarea,
+  input {
+    @include InputStyle;
+  }
+
+  select {
+    @include ButtonGhostStyle();
+  }
+
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // ✅ グループ
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-type="group"] {
+    label {
+      display: none;
+    }
+
+    .acf-field .acf-label {
+      margin: 0 !important;
+    }
+
+    .acf-label {
+      margin: 0 !important;
+    }
+
+    p.description {
+      margin: 0 !important;
+    }
+
+    .wp-editor-tools {
+      display: none;
+    }
+  }
+
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // ✅ 画像
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-type="image"] {
+    .acf-image-uploader {
+      .acf-button.button {
+        @include ButtonPrimaryStyle;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 0px;
+      }
+    }
+  }
+
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // ✅ リピーター
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-type="repeater"] {
+    .acf-actions {
+      .acf-button.button.button-primary {
+        @include ButtonGhostStyle;
+      }
+    }
+  }
+
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // ✅ レイアウトを追加ボタン
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  .acf-flexible-content > .acf-actions {
+    margin-top: 4rem;
+
+    .acf-button.button.button-primary {
+      width: 100%;
+      padding: 2em 1em;
+      font-weight: 700;
+      color: $Primary;
+      text-align: center;
+      border: 2px dashed $Primary;
+      border-radius: 4px;
+      box-shadow: none;
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // GridCommon
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-name="ImageGroup1"],
+  [data-name="ImageGroup2"],
+  [data-name="ImageGroup3"],
+  [data-name="col1"],
+  [data-name="col2"],
+  [data-name="col3"],
+  [data-name="image1"],
+  [data-name="image2"],
+  [data-name="image3"],
+  [data-name="caption1"],
+  [data-name="caption2"],
+  [data-name="caption3"],
+  [data-name="editor1"],
+  [data-name="editor2"],
+  [data-name="editor3"] {
+    padding: 0;
+  }
+
+  [data-name="ImageGroup1"],
+  [data-name="ImageGroup2"],
+  [data-name="ImageGroup3"] {
+    margin-bottom: 2rem;
+  }
+
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // ✅ ビジュアルエディタに付く標準ボタンの設定
+  //    ビジュアルエディタのフィールドを追加した場合は、プロパティ追加すると
+  //    スタイルボタンやリンク挿入ボタンが表示されます。
+  // ::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+  // [data-name="your_field_name"],
+  [data-name="col1"],
+  [data-name="col2"],
+  [data-name="col3"] {
+    .mce-toolbar .mce-btn-group,
+    div.mce-toolbar-grp > div {
+      padding: 0;
+    }
+
+    .mce-top-part::before {
+      display: none;
+    }
+
+    .mce-statusbar.mce-container.mce-panel.mce-stack-layout-item.mce-last {
+      // display: none;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .mce-toolbar :not(:first-child) {
+      display: none;
+    }
+
+    [aria-label="リンクの挿入/編集 (Ctrl+K)"] {
+      display: block !important;
+      width: 30px;
+      height: 30px;
+      margin-left: 1rem;
+      background: #fff;
+      border: 2px solid $Secondary;
+      border-radius: 100%;
+
+      button {
+        width: 100%;
+        height: 100%;
+        @include Flex(center, center);
+      }
+    }
+
+    .mce-container.mce-flow-layout-item.mce-first.mce-last.mce-btn-group {
+      width: 100%;
+
+      & > div {
+        width: 100%;
+        @include Flex(left, null);
+      }
+    }
+
+    .mce-menubtn {
+      @include ButtonGhostStyle;
+    }
+
+    .mce-edit-area {
+      margin-top: 1rem;
+    }
+
+    .mce-btn .mce-txt {
+      font-size: 13px;
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // 1ColumnLayout
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-layout="Col1Layout"] {
+    width: 100%;
+
+    & > .acf-fields {
+      gap: 0 2rem;
+      width: 100%;
+      @include Flex;
+
+      & > .acf-field {
+        width: 100%;
+      }
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // 2ColumnLayout
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-layout="Col2Layout"] {
+    width: 100%;
+
+    & > .acf-fields {
+      gap: 0 2rem;
+      width: 100%;
+      @include Flex;
+
+      & > .acf-field {
+        @include FlexItem(2, 2rem);
+      }
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // 2ColumnLayout
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-layout="Col3Layout"] {
+    width: 100%;
+
+    & > .acf-fields {
+      gap: 0 2rem;
+      width: 100%;
+      @include Flex;
+
+      & > .acf-field {
+        @include FlexItem(3, 2rem);
+      }
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // 見出し大
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-name="HeadingBig"] input {
+    // _single.scss のスタイルを流用すると管理画面でも同一のスタイルにできる
+    @extend .c-swe-heading-big;
+    margin-bottom: 0;
+  }
+
+  [data-name="HeadingBig"] label {
+    display: none !important;
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // 見出し小
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-name="HeadingSmall"] input {
+    // _single.scss のスタイルを流用すると管理画面でも同一のスタイルにできる
+    @extend .c-swe-heading-small;
+    margin-bottom: 0;
+  }
+
+  [data-name="HeadingSmall"] label {
+    display: none !important;
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // リンクボタン
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-layout="LinkButtonLayout"] {
+    .acf-label {
+      display: none;
+    }
+
+    .acf-fields {
+      @include Flex(left, null);
+      gap: 0 2rem;
+    }
+
+    [data-name="LinkButtonText"] {
+      width: 40%;
+      padding: 0;
+    }
+
+    [data-name="LinkButtonUrl"] {
+      width: calc(60% - 2rem);
+      padding: 0;
+    }
+
+    [data-name="LinkButtonWindow"] {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // リスト
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-layout="ListLayout"] {
+    thead,
+    .acf-label {
+      display: none;
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // リスト
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-layout="ListNameLayout"] {
+    thead,
+    .acf-label {
+      display: none;
+    }
+
+    [data-name="Name"] {
+      width: 240px;
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // ファイルダウンロードボタン
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-layout="FileLayout"] {
+    .acf-label {
+      display: none;
+    }
+
+    [data-name="File"] {
+      margin-top: 1rem;
+
+      .acf-button.button {
+        @include ButtonPrimaryStyle;
+        margin-bottom: 1rem;
+      }
+
+      .hide-if-value p {
+        font-size: 0px;
+      }
+    }
+
+    .acf-actions {
+      background: $Secondary-Light;
+    }
+
+    .acf-actions.-hover {
+      right: auto;
+      left: 0;
+    }
+
+    .acf-icon.-cancel::before,
+    .acf-icon.-pencil::before {
+      color: $Secondary;
+      translate: 0 5px;
+    }
+
+    .acf-icon.-cancel:hover::before {
+      color: color(status, error);
+    }
+
+    .acf-icon.-pencil:hover::before {
+      color: $Primary;
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // テーブル
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+  [data-layout="TableLayout"] {
+    .acf-label {
+      display: none;
+    }
+  }
+
+  .acf-table-wrap * {
+    background: none !important;
+  }
+
+  .acf-table-wrap {
+    background: #fff !important;
+  }
+
+  //ポップアップする入力欄
+  .acf-table-cell-editor-textarea {
+    background: #fff !important;
+    border: 1px solid $Border !important;
+  }
+
+  //吹き出しのしっぽ
+  .acf-table-cell-editor {
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 1rem;
+      width: 10px;
+      height: 10px;
+      margin: auto;
+      content: "";
+      background: #fff;
+      border: 0px solid;
+      border-right: 1px solid color(border);
+      border-bottom: 1px solid color(border);
+      transform: translateY(5px) rotate(45deg);
+    }
+
+    &::before {
+      display: none !important;
+    }
+  }
+
+  //セル
+  //セル
+  .acf-table-header-cell {
+    .acf-table-header-cont {
+      height: 35px;
+      padding: 0.5rem 1rem;
+      border: 1px solid $Secondary !important;
+    }
+  }
+
+  .acf-table-body-cell {
+    min-width: 200px;
+    padding: 0.75rem 1rem !important;
+    border-right: 1px solid rgba($color: $Border, $alpha: 0.1) !important;
+  }
+
+  .acf-table-bottom-row,
+  .acf-table-body-row {
+    border-top: 1px solid rgba($color: $Border, $alpha: 0.1) !important;
+  }
+
+  .acf-table-top-left,
+  .acf-table-body-left {
+    width: 50px !important;
+  }
+
+  .acf-table-optionbox label {
+    font-size: 0px;
+
+    &::after {
+      font-size: 14px;
+      font-weight: normal;
+      color: #667085;
+      content: "見出しを使用しますか？";
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // Youtube
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-name="YoutubeUrl"] {
+    .acf-label {
+      display: none;
+    }
+
+    .acf-oembed .title {
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .acf-oembed .title .input-search {
+      @include InputStyle();
+      height: auto;
+      margin: 0;
+      cursor: text;
+      box-shadow: none;
+    }
+
+    .acf-oembed .canvas .canvas-media {
+      position: relative;
+      aspect-ratio: 16/9;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        margin: auto;
+      }
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // Description
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  [data-name="Description"] {
+    margin-top: 8rem;
+
+    label {
+      padding: 1.5rem 1rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: $Secondary;
+      background: $Secondary-Light;
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // 2025/09/04 Add
+  //
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  .acf-actions.acf-fc-top-actions {
+    display: none;
+  }
+
+  .acf-fc-layout-controls {
+    display: none;
+  }
+}
+
+#postimagediv .inside img {
+  height: revert-layer;
+}

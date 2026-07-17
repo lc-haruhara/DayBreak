@@ -1,0 +1,327 @@
+@charset "utf-8";
+@use "foundation/index" as *;
+
+// 💬 Description.........................................
+//
+// シングルページ（記事ページ）に対しての scss
+// 命名規則 :
+// .p-[ポストタイプ名]-[セクション名]-[要素名]
+//
+//	最低限のスタイルしか当ててないので自由に編集してください。
+//	消してスクラッチでも大丈夫。
+//
+// ............................................................
+// Material Symbols の読み込みは header（functions/config/fonts.config.php）で
+// 一元管理・自動生成する。ここでの @import は行わない。
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Layout
+//
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-single-contents {
+  width: 100%;
+  margin: auto;
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 PageTitle
+//
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-single-contents-page-title {
+  font-size: 2rem;
+  color: #000;
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 PostDate
+//
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-single-contents-date {
+  display: block;
+  margin-bottom: 4rem;
+  color: #000;
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 TableOfContent (自動挿入目次)
+// 自動生成のソースコードは single.js 参照
+// 以下の空のセレクタにプロパティを書いていけばスタイルが反映されます。
+//
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-single-table-of-contents {
+  // Listを梱包する外枠
+  margin: 8rem 0;
+
+  // :::::::::::::::::::::::::::::::::::::::::::::
+  //	✅ Heading
+  // :::::::::::::::::::::::::::::::::::::::::::::
+  &-heading {
+    // 目次自体の見出し梱包要素
+
+    &-body {
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::
+  //	✅ List
+  // :::::::::::::::::::::::::::::::::::::::::::::
+  &-list {
+    // List梱包要素
+
+    &-body {
+    }
+  }
+
+  // :::::::::::::::::::::::::::::::::::::::::::::
+  //	✅ ListItem
+  //	見出しの番号が出るように書いてあります。
+  //	ステイルは適時調整してください。
+  // :::::::::::::::::::::::::::::::::::::::::::::
+  &-list-item {
+    // li 要素
+    counter-increment: number 1;
+
+    &-link {
+      // a 要素
+
+      &-body {
+      }
+
+      .number {
+        display: inline-block;
+        // 番号
+        width: 45px;
+
+        &::after {
+          content: counter(number, decimal-leading-zero) ".";
+        }
+      }
+
+      .text {
+        // テキスト
+        display: inline-block;
+      }
+    }
+
+    // a 要素
+  }
+
+  // li 要素
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔Fontサイズ等に使用する class
+// dashboard/editor-style.scss で use しているのでビジュアルエディタのスタイルが自動で変わる。
+//
+// ............................................................
+.p-single-accent {
+  // マーカー効果など、テキストを強調したい場合のスタイリングをする
+  color: #fff;
+  background: #000;
+}
+
+.p-single-bold {
+  font-weight: 700;
+}
+
+.p-single-size-l {
+  @include FontStyle(l);
+}
+
+.p-single-size-s {
+  @include FontStyle(s);
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 SandwichEditor
+//
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-single-contents {
+  .c-swe-list,
+  .c-swe-table,
+  .c-swe-youtube,
+  .c-swe-link-button,
+  .c-swe-file {
+    margin-bottom: 4rem;
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ グリッドレイアウト等のdefaultの設定
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-swe-grid {
+  width: 100%;
+  @include Flex(left, null, 4rem);
+  margin-bottom: 4rem;
+
+  @include Breakpoint(inch7) {
+    margin-bottom: 0;
+  }
+
+  //1col
+  .grid {
+    width: 100%;
+  }
+
+  //2col
+  &._2col {
+    .grid {
+      @include FlexItem(2, 4rem);
+
+      @include Breakpoint(inch7) {
+        width: 100%;
+      }
+    }
+  }
+
+  //3col
+  &._3col {
+    .grid {
+      @include FlexItem(3, 4rem);
+
+      @include Breakpoint(inch7) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ 見出し
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//ページタイトル
+.c-swe-page-title {
+  @include FontStyle(x2l);
+}
+
+//見出し大
+.c-swe-heading-big {
+  @include FontStyle(x2l);
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+//見出し小
+.c-swe-heading-small {
+  @include FontStyle(l);
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ 画像
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Imageの梱包要素
+.c-swe-grid-img-wrap {
+  & + .c-swe-grid-text {
+    //テキストと並んだ場合
+    margin-top: 1rem;
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ テキスト
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//画像に対してのキャプション
+.c-swe-grid-caption {
+  @include FontStyle(s);
+  font-style: italic;
+  color: #aaa;
+}
+
+//本文
+.c-swe-grid-text {
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ テキストリンク
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-swe-link-text {
+  margin: 0 0.25rem;
+  color: #000;
+
+  &::after {
+    margin-left: 0.15rem;
+    font-family: "Material Symbols Outlined";
+    vertical-align: bottom;
+    content: "open_in_new";
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ Youtube埋め込み
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-swe-youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+//	✅ テーブル
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-swe-table {
+  table {
+    width: 100%;
+    border-bottom: 1px solid color(border);
+
+    @include Breakpoint(inch13) {
+      //横スクロール用
+      overflow-x: scroll;
+    }
+
+    th {
+      padding: 1rem;
+      color: #fff;
+      background: #aaa;
+      border-right: 1px solid color(border);
+    }
+
+    tr {
+      padding: 1rem;
+      border-top: 1px solid color(border);
+      border-left: 1px solid color(border);
+    }
+
+    td {
+      max-width: 200px;
+      padding: 1rem;
+      border-right: 1px solid color(border);
+    }
+  }
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+// ✅ リンクボタン
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-swe-file,
+.c-swe-link-button {
+  text-align: center;
+}
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+//	🍔 HeadingBig
+//
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// :::::::::::::::::::::::::::::::::::::::::::::
+//	✅ HeadingSmall
+// :::::::::::::::::::::::::::::::::::::::::::::

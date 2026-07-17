@@ -1,0 +1,19 @@
+@use "foundation/index" as *;
+
+.c-list-pp {
+  width: 100%;
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 ListPPItemParagraphSchema
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-list-pp-item-paragraph-schema {
+  display: block;
+  margin-top: 2rem;
+  @include FontStyle(s);
+  .c-link {
+    @include FontStyle(xs);
+  }
+}
