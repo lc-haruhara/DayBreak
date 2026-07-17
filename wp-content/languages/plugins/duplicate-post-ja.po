@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast Duplicate Post - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-03-26 10:54:30+0000\n"
+"PO-Revision-Date: 2026-07-11 05:59:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,6 +11,14 @@ msgstr ""
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Yoast Duplicate Post - Stable (latest release)\n"
 
+#: src/watchers/copied-post-watcher.php:76
+msgid "Edit the duplicate."
+msgstr "重複を編集する。"
+
+#: src/watchers/copied-post-watcher.php:60
+msgid "View trash."
+msgstr "ゴミ箱を表示。"
+
 #. translators: %s: Number of posts skipped.
 #: src/watchers/bulk-actions-watcher.php:73
 #: src/watchers/bulk-actions-watcher.php:113
@@ -18,11 +26,11 @@ msgid "%s item skipped due to insufficient permissions."
 msgid_plural "%s items skipped due to insufficient permissions."
 msgstr[0] "%s個の項目は、権限が不十分なためスキップされました。"
 
-#: src/post-republisher.php:148
+#: src/post-republisher.php:155
 msgid "Permission denied"
 msgstr "アクセス拒否"
 
-#: src/post-republisher.php:147
+#: src/post-republisher.php:154
 msgid "You are not allowed to republish this post."
 msgstr "この投稿を再公開することは許可されていません。"
 
@@ -101,7 +109,7 @@ msgstr "追加されました"
 msgid "Removed"
 msgstr "削除されました"
 
-#: src/post-republisher.php:267
+#: src/post-republisher.php:277
 msgid "An error occurred while deleting the Rewrite & Republish copy."
 msgstr "書き換え & 再公開コピーの削除中にエラーが発生しました。"
 
@@ -112,30 +120,30 @@ msgstr "強力な書き換えと再公開機能を含む、投稿と固定ペー
 
 #. translators: 1: The page title with a link to the frontend page, 2: The
 #. scheduled date and time.
-#: src/ui/classic-editor.php:291
+#: src/ui/classic-editor.php:293
 msgid "This rewritten page %1$s is now scheduled to replace the original page. It will be published on %2$s."
 msgstr "この書き換え済みページ %1$s は、元のページを置き換えるよう予約されています。%2$sに公開されます。"
 
 #. translators: 1: The post title with a link to the frontend page, 2: The
 #. scheduled date and time.
-#: src/ui/classic-editor.php:278
+#: src/ui/classic-editor.php:280
 msgid "This rewritten post %1$s is now scheduled to replace the original post. It will be published on %2$s."
 msgstr "この書き換え済み投稿 %1$s は、元の投稿を置き換えるよう予約されています。%2$sに公開されます。"
 
-#: src/ui/classic-editor.php:252 js/dist/duplicate-post-strings.js:1
+#: src/ui/classic-editor.php:253 js/dist/duplicate-post-strings.js:1
 msgid "Schedule republish"
 msgstr "再公開予約"
 
 #. translators: %s: Date on which the post is to be republished.
-#: src/ui/classic-editor.php:229
+#: src/ui/classic-editor.php:230
 msgid "Republish on: %s"
 msgstr "再公開日: %s"
 
-#: src/ui/classic-editor.php:201
+#: src/ui/classic-editor.php:202
 msgid "Compare"
 msgstr "比較"
 
-#: src/ui/classic-editor.php:198
+#: src/ui/classic-editor.php:199
 msgid "Do you want to compare your changes with the original version before merging? Please save any changes first."
 msgstr "統合する前に、変更点を元のバージョンと比較しますか ? 最初に変更を保存してください。"
 
@@ -163,7 +171,7 @@ msgid "Warning: users will be able to copy, rewrite and republish all posts, eve
 msgstr "警告: ユーザーは他のユーザーの投稿も含め、すべての投稿を複製、書き換え、再公開できるようになります。"
 
 #: src/admin/options.php:281 src/ui/admin-bar.php:105 src/ui/admin-bar.php:125
-#: src/ui/bulk-actions.php:74 src/ui/classic-editor.php:173
+#: src/ui/bulk-actions.php:75 src/ui/classic-editor.php:174
 #: js/dist/duplicate-post-edit.js:2
 msgid "Rewrite & Republish"
 msgstr "書き換え & 再公開"
@@ -188,15 +196,15 @@ msgstr "元の投稿は書き換え済み投稿と置き換えられています
 
 #. translators: %1$s: scheduled date of the copy, %2$s: scheduled time of the
 #. copy.
-#: src/watchers/copied-post-watcher.php:66
+#: src/watchers/copied-post-watcher.php:90
 msgid "A duplicate of this post was made, which is scheduled to replace this post on %1$s at %2$s."
 msgstr "この投稿の複製が作成されました。%1$s @ %2$s にこの投稿を置き換える予定です。"
 
-#: src/watchers/copied-post-watcher.php:58
+#: src/watchers/copied-post-watcher.php:82
 msgid "A duplicate of this post was made. Please note that any changes you make to this post will be replaced when the duplicated version is republished."
 msgstr "この投稿の複製が作成されました。この投稿に加えた変更は、複製版が再公開された際に置き換えられることに注意してください。"
 
-#: src/watchers/copied-post-watcher.php:50
+#: src/watchers/copied-post-watcher.php:63
 msgid "You can only make one Rewrite & Republish duplicate at a time, and a duplicate of this post already exists in the trash. Permanently delete it if you want to make a new duplicate."
 msgstr "一度に複製できるのは1つの書き換えと再公開のみであり、この記事の複製はすでにゴミ箱にあります。新しい複製を作成する場合は、完全に削除してください。"
 
@@ -208,11 +216,11 @@ msgstr "これで、元の投稿のこの複製で投稿の書き換えを開始
 msgid "You can now start rewriting your post in this duplicate of the original post. If you click \"Republish\", your changes will be merged into the original post and you’ll be redirected there."
 msgstr "これで、元の投稿のこの複製で投稿の書き換えを開始できます。「再公開」をクリックすると、変更が元の投稿に統合され、そこにリダイレクトされます。"
 
-#: src/post-republisher.php:405
+#: src/post-republisher.php:415
 msgid "An error occurred while republishing the post."
 msgstr "記事の再公開中にエラーが発生しました。"
 
-#: src/post-republisher.php:85 src/ui/classic-editor.php:224
+#: src/post-republisher.php:85 src/ui/classic-editor.php:225
 #: js/dist/duplicate-post-strings.js:1
 msgid "Republish"
 msgstr "再公開"
@@ -252,7 +260,7 @@ msgstr "変更の概要を取得できません。ID %s の投稿が見つかり
 msgid "No post has been supplied!"
 msgstr "投稿が指定されていません。"
 
-#: admin-functions.php:615
+#: admin-functions.php:626
 msgid "You aren't allowed to duplicate this post"
 msgstr "この投稿を複製する権限がありません"
 
@@ -377,7 +385,7 @@ msgstr "現在のユーザーは投稿をコピーする権限がありません
 msgid "you probably want this unchecked, unless you have very special requirements"
 msgstr "特別な要件でない限り、チェックしないことをお勧めします"
 
-#: admin-functions.php:779
+#: admin-functions.php:790
 msgid "Documentation"
 msgstr "ドキュメント"
 
@@ -500,7 +508,7 @@ msgstr "権限"
 msgid "What to copy"
 msgstr "複製元"
 
-#: admin-functions.php:621
+#: admin-functions.php:632
 msgid "Copy features for this post type are not enabled in options page"
 msgstr "この投稿タイプに対する複製機能が設定ページで有効化されていません"
 
@@ -583,7 +591,7 @@ msgid "New Draft"
 msgstr "新規下書き"
 
 #: common-functions.php:80 src/ui/admin-bar.php:97 src/ui/admin-bar.php:115
-#: src/ui/classic-editor.php:144 js/dist/duplicate-post-edit.js:2
+#: src/ui/classic-editor.php:145 js/dist/duplicate-post-edit.js:2
 msgid "Copy to a new draft"
 msgstr "新規下書きとして複製"
 
