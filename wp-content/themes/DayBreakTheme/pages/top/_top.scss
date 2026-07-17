@@ -1,5 +1,236 @@
 @charset "utf-8";
 @use "foundation/index" as *;
 
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// トップページ ヒーロースライダー
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .p-top-hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  &-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 HeroImage
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@property --hero-progress {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
+// 伸びるライン／下地の色。6秒ごとに入れ替わる
+@property --hero-line {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #000;
+}
+
+@property --hero-base {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #fff;
+}
+
+.p-top-hero-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  pointer-events: none;
+  transform: scale(0.5);
+  &-body {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 50%;
+    aspect-ratio: 10/10;
+    margin: auto;
+    overflow: clip;
+    background: #fff;
+    border-radius: 100%;
+    transform: scale(1) rotate(0.1deg) translateY(-50%);
+    will-change: transform;
+
+    // 円形プログレスバー（6秒で満タン。黒→白→黒…と交互にループ）
+    &::after {
+      position: absolute;
+      inset: 0;
+      // 残り時間の表示なので、シャッター（3）より上に出したままにする
+      z-index: 4;
+      pointer-events: none;
+      content: "";
+      background: conic-gradient(
+        var(--hero-line) var(--hero-progress),
+        var(--hero-base) 0
+      );
+      border-radius: 100%;
+      // scale(0.5) がかかるため、指定値の半分が実際の見た目の線幅になる
+      mask: radial-gradient(
+        closest-side,
+        transparent calc(100% - 1rem),
+        #000 calc(100% - 1rem)
+      );
+      animation: hero-progress 12s linear infinite;
+      will-change: transform;
+    }
+  }
+
+  // リングの内側の円。ここでクリップし、中の img だけをズームさせることで
+  // 写真が寄っても円のサイズは変わらない
+  &-item {
+    position: absolute;
+    inset: 2rem;
+    overflow: clip;
+    border-radius: 100%;
+    opacity: 0;
+
+    // JS が動かない場合でも 1 枚目だけは見えるようにする
+    &:first-child {
+      opacity: 1;
+    }
+
+    // 直前の 1 枚。差し替えはシャッターが閉じている間に済むので繋ぎには使わないが、
+    // 万一タイミングがズレても白い地が覗かないよう下に残しておく
+    &.is-prev {
+      z-index: 1;
+      opacity: 1;
+
+      img {
+        transform: scale(1.08);
+      }
+    }
+
+    // 表示中の 1 枚。6 秒かけてゆっくり寄っていく
+    &.is-active {
+      z-index: 2;
+      opacity: 1;
+
+      img {
+        transform: scale(1.08);
+        transition: transform 6s linear;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      // ズームの起点。is-active で 1.08 まで寄る
+      transform: scale(1);
+    }
+  }
+
+  // カメラのシャッター。上下の黒幕が閉じ、閉じ切った所で JS が画像を差し替える
+  &-shutter {
+    position: absolute;
+    inset: 2rem;
+    z-index: 3;
+    overflow: clip;
+    pointer-events: none;
+    border-radius: 100%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 50%;
+      content: "";
+      background: #000;
+      transform: scaleY(0);
+    }
+
+    &::before {
+      top: 0;
+      transform-origin: top;
+    }
+
+    &::after {
+      bottom: 0;
+      transform-origin: bottom;
+    }
+
+    // 速度はここだけで決まる。JS は実際の再生時間を読んで差し替えの時刻を出すので、
+    // 秒数を変えてもこの 1 箇所で完結する
+    &.is-shooting::before,
+    &.is-shooting::after {
+      animation: hero-shutter 0.25s ease-in-out;
+    }
+  }
+}
+
+// 40% で閉じ切り、60% まで保持してから開く。JS はこの中間（50%）で画像を差し替える
+@keyframes hero-shutter {
+  0%,
+  100% {
+    transform: scaleY(0);
+  }
+  40%,
+  60% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes hero-progress {
+  // 1周目: 白地に黒が伸びる
+  0% {
+    --hero-progress: 0%;
+    --hero-line: #000;
+    --hero-base: #fff;
+  }
+  49.999% {
+    --hero-progress: 100%;
+    --hero-line: #000;
+    --hero-base: #fff;
+  }
+
+  // 2周目: 黒地に白が伸びる（黒線が消えていくように見える）
+  50% {
+    --hero-progress: 0%;
+    --hero-line: #fff;
+    --hero-base: #000;
+  }
+  100% {
+    --hero-progress: 100%;
+    --hero-line: #fff;
+    --hero-base: #000;
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 BackgroundCatch
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-top-hero-background-catch {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  transform: rotate(0deg) translateY(-50%);
+
+  &-body {
+    @include Flex(left, center, 0rem);
+  }
+
+  &-item {
+    width: 50%;
+    padding: 2rem 0;
+    overflow: clip;
+  }
 }

@@ -21,8 +21,8 @@ return [
   //    preload: 巨大な日本語フォント等は false（優先読み込みしない）
   'text_fonts' => [
     ['name' => 'Noto Sans JP', 'weights' => [400, 700], 'preload' => false],
-    ['name' => 'Poppins',      'weights' => [400, 700], 'preload' => true],
-    ['name' => 'Oswald',       'weights' => [400, 700], 'preload' => true],
+    ['name' => 'Manrope',      'weights' => [400, 700], 'preload' => true],
+    ['name' => 'Sofia Sans Extra Condensed',      'weights' => [600, 700], 'preload' => true],
   ],
 
   //日本語フォールバックチェーン（family_stacks の '__ja__' で展開）
@@ -41,8 +41,8 @@ return [
   //    キー 'base' は変数名 --ff-base に対応（SCSS の $font-family-map から参照）
   //    '__ja__' は上の ja_fallback に展開される
   'family_stacks' => [
-    'base' => ['Poppins', '__ja__'],
-    'sub'  => ['Oswald', '__ja__'],
+    'base' => ['Manrope', '__ja__'],
+    'sub'  => ['Sofia Sans Extra Condensed', '__ja__'],
   ],
 
   //Material Symbols（アイコンフォント）

@@ -26,20 +26,20 @@ add_action('wp_enqueue_scripts', function () {
   //
   //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-  // Swiper.js
-  // wp_enqueue_script(
-  //   'swiper-bundle-js',
-  //   'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js',
-  //   [],
-  //   null,
-  //   true
-  // );
-  // wp_enqueue_style(
-  //   'swiper-bundle-css',
-  //   'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css',
-  //   [],
-  //   null
-  // );
+  // Swiper.js（MIT ライセンス / トップページ ヒーロースライダーで使用）
+  wp_enqueue_script(
+    'swiper-bundle-js',
+    'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js',
+    [],
+    null,
+    true
+  );
+  wp_enqueue_style(
+    'swiper-bundle-css',
+    'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css',
+    [],
+    null
+  );
 
   // GSAP
   // wp_enqueue_script(

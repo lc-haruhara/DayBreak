@@ -1,0 +1,87 @@
+@use "foundation/index" as *;
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+//	🍔 TextLoop
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-text-loop {
+  width: 100%;
+  pointer-events: none;
+
+  &-track {
+    display: flex;
+    width: max-content;
+    animation: c-text-loop-scroll var(--text-loop-duration) linear infinite;
+  }
+
+  &-group {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  &-text {
+    display: block;
+    padding-left: 0.15em;
+    font-size: 10vmax;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+    will-change: transform;
+    text-box: trim-both cap alphabetic;
+    @include FontFamily(sub);
+
+    span {
+      position: relative;
+      display: inline-block;
+      line-height: 1;
+      letter-spacing: -0.015em;
+      text-box: trim-both cap alphabetic;
+      &:nth-child(even) {
+        -webkit-text-stroke: 3px #000;
+        color: transparent;
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          margin: auto;
+          color: #fff;
+          letter-spacing: -0.015em;
+          content: attr(data-text);
+          -webkit-text-stroke: none;
+          -webkit-text-stroke: 0px #000;
+          text-box: trim-both cap alphabetic;
+        }
+      }
+    }
+  }
+
+  &.is-jp {
+    .c-text-loop-text {
+      font-size: 7.5vmax;
+      font-feature-settings: "palt";
+    }
+  }
+
+  // 右方向へ流す
+  &._dir-plus &-track {
+    animation-direction: reverse;
+  }
+}
+
+@keyframes c-text-loop-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-text-loop-track {
+    animation: none;
+  }
+}
