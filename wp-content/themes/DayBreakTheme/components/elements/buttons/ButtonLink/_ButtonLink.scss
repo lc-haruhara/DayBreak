@@ -7,7 +7,90 @@
 .c-btn-link {
   display: inline-block;
 
+  &-body {
+    @include FontStyle(l);
+    @include Flex(center, center, 1em);
+    padding: 0.5em 0.5em 0.5em 1.5em;
+    color: color(text, base);
+    border: 2px solid color(text, base);
+    border-radius: 50px;
+  }
+
+  &-icon {
+    position: relative;
+    display: block;
+    width: 2em;
+    aspect-ratio: 1/1;
+    background: color(text, base);
+    border-radius: 100%;
+    .c-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: auto;
+      color: #fff;
+      translate: -41% -51%;
+    }
+  }
+
+  &-text {
+    position: relative;
+    overflow: clip;
+  }
+
+  &-text-en {
+    @include FontFamily(sub);
+    @include FontStyle(x2l);
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &-text-jp {
+    @include FontStyle(m);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 0.05em;
+    font-weight: 700;
+    white-space: nowrap;
+    transform: translateY(100%);
+    transition: transform 0.2s ease-in-out;
+  }
+
   &:disabled {
     filter: grayscale(1);
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Primary
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &._type-primary {
+    .c-btn-link-body {
+      color: #fff;
+      background: color(text, base);
+    }
+    .c-btn-link-icon {
+      background: #fff;
+    }
+    .c-icon {
+      color: color(text, base);
+    }
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Hover
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-btn-link-body:hover {
+  .c-btn-link-text-en {
+    transform: translateY(-100%);
+  }
+  .c-btn-link-text-jp {
+    transform: translateY(0);
   }
 }

@@ -1,0 +1,78 @@
+@use "foundation/index" as *;
+
+.c-deco-circle-text {
+  right: 0%;
+  z-index: 0;
+  display: inline-block;
+  aspect-ratio: 10/10;
+  contain: layout;
+  overflow-x: clip;
+  vertical-align: bottom;
+  pointer-events: none;
+
+  @include Breakpoint(inch11) {
+    top: 0;
+    bottom: auto;
+    width: 70vw;
+  }
+
+  @include Breakpoint(mobile) {
+    width: 100vw;
+  }
+
+  &-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+
+    @include Breakpoint(mobile) {
+    }
+
+    &-body {
+      animation-name: kfRotate360;
+      animation-duration: 40s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      will-change: transform;
+    }
+    svg {
+      overflow: hidden;
+    }
+    textPath {
+      font-size: 4px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0em;
+      fill: #000;
+      transition: 0.25s ease;
+    }
+    &:last-child {
+      rotate: 180deg;
+    }
+  }
+}
+
+.c-deco-circle-text-svg:nth-child(2) {
+  textPath {
+    @include FontFamily(base);
+    font-size: 4px;
+  }
+}
+
+@keyframes kfRotate360 {
+  0% {
+    rotate: 0;
+  }
+  100% {
+    rotate: -360deg;
+  }
+}
+
+.c-deco-circle-text._no-rotate {
+  .c-deco-circle-text-svg-body {
+    animation: none;
+  }
+}

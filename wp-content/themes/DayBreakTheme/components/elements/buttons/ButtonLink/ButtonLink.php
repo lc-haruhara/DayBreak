@@ -16,9 +16,14 @@ $icon          = $args['icon'] ?? '';
 $svg           = $args['svg'] ?? '';
 $icon_position = $args['icon_position'] ?? 'right';
 $label_for     = $args['label'] ?? '';
+$text_jp        = $args['text_jp'] ?? '';
 
 if ($text === '') {
-  $text = 'more';
+  $text = 'Read more';
+}
+
+if ($text_jp === '') {
+  $text_jp = '詳しく見る';
 }
 
 /* ==========================================================
@@ -99,7 +104,7 @@ if ($tag === 'a') {
     }
   } elseif (preg_match('/\d/', $url) && preg_match('/^[\d\s\-\.\+\(\)]+$/u', $url) && strlen(preg_replace('/\D/', '', $url)) >= 10) {
     $is_tel    = true;
-    $tel_value = trim(preg_replace('/[^\d\-\.\+\(\)\s]/u', '', $tel_value));
+    $tel_value = trim(preg_replace('/[^\d\-\.\+\(\)\s]/u', '', $url));
     $attrs[]   = 'href="tel:' . esc_attr($tel_value) . '"';
   }
 
@@ -224,12 +229,18 @@ if (!empty($icon) || !empty($svg)) {
 
     <?php if ($icon_html && $icon_position === 'left') echo $icon_html; ?>
 
-    <span
-      class="c-btn-link-text"
-      <?php if ($text_lang !== ''): ?>
-      lang="<?= esc_attr($text_lang); ?>"
-      <?php endif; ?>>
-      <?= esc_html($text); ?>
+    <span class="c-btn-link-text">
+      <span
+        class="c-btn-link-text-en"
+        <?php if ($text_lang !== ''): ?>
+        lang="<?= esc_attr($text_lang); ?>"
+        <?php endif; ?>>
+        <?= esc_html($text); ?>
+      </span>
+      <span
+        class="c-btn-link-text-jp">
+        <?= esc_html($text_jp); ?>
+      </span>
     </span>
 
     <?php if ($icon_html && $icon_position === 'right') echo $icon_html; ?>

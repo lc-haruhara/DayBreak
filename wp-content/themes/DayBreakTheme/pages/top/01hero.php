@@ -60,6 +60,48 @@ $hero_images = [
       </div>
     </div>
 
+    <?php
+    C_Elements('DecorationCircle', [
+      'rotate' => false,
+    ]);
+    ?>
+
+    <!--::::::::::::::::::::::::::::::::::::::::::::
+
+      Links
+
+    ::::::::::::::::::::::::::::::::::::::::::::-->
+    <div class="p-top-hero-links">
+      <div class="p-top-hero-links-body">
+        <?php
+        C_Elements('ButtonLink', [
+          'text' => 'Concept',
+          'text_jp' => 'コンセプト',
+          'url' => '/concept/',
+          'icon' => 'chevron_forward',
+        ]);
+        ?>
+        <?php
+        C_Elements('ButtonLink', [
+          'text' => 'Recruit',
+          'text_jp' => '採用情報',
+          'url' => '/recruit/',
+          'icon' => 'chevron_forward',
+          'class' => ['_type-primary'],
+        ]);
+        ?>
+      </div>
+    </div>
+
+    <!--::::::::::::::::::::::::::::::::::::::::::::
+
+      Scroll
+
+    ::::::::::::::::::::::::::::::::::::::::::::-->
+    <div class="p-top-hero-scroll" aria-hidden="true">
+      <span class="p-top-hero-scroll-text">Scroll</span>
+      <span class="p-top-hero-scroll-line"></span>
+    </div>
 
   </div>
 </section>

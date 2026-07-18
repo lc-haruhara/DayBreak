@@ -15,7 +15,6 @@
   will-change: transform;
 
   &._chevron_forward {
-    translate: 0 -7%;
   }
 }
 
@@ -28,6 +27,5 @@
   @include IconButtonStyle();
 
   ._chevron_forward {
-    translate: 8% -4%;
   }
 }
