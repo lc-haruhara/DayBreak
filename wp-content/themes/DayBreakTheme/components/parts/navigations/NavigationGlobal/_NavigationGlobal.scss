@@ -2,19 +2,27 @@
 
 .c-navigation-global {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 1rem;
+  right: 0rem;
   z-index: 999990;
+  width: 100%;
+  padding: 0 1rem;
 
   @include Breakpoint(inch11) {
     display: none;
   }
 
   //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 LogoCommon
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-logo {
+    width: 8%;
+  }
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   // 🍟 Body
   //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   &-body {
-    @include Flex(left, center, 1rem);
+    @include Flex(between, center, 1rem);
   }
 }
 
@@ -24,13 +32,80 @@
 //
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .c-navigation-global-list {
-  @include Flex(left, center, 1rem);
-  padding: 0.5em 1em;
+  width: 55%;
+  @include Flex(right, center, 0.5rem);
   background: #fff;
-  @include FontStyle(s);
+
+  .item {
+    @include FlexItem(7);
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 2px;
+      pointer-events: none;
+      content: "";
+      background: color(text);
+      transform: scale(0, 1);
+      transform-origin: 100% 50% 0;
+      transition: transform 0.35s ease-in-out;
+      will-change: transform;
+    }
+  }
 
   .item-body {
+    position: relative;
+    z-index: 10;
     display: inline-block;
-    padding: 0.5em 1em;
+    width: 100%;
+    padding: 0.5em 0em;
+    overflow: clip;
+    font-weight: 700;
+    color: color(text);
+    text-align: center;
+
+    span {
+      display: block;
+      will-change: transform;
+    }
+
+    .english {
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      transition: 0.2s ease-in-out;
+    }
+
+    .japanese {
+      @include FontStyle(s);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      margin: auto;
+      opacity: 1;
+      transform: translate(-50%, 100%);
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Hover
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  .item:hover {
+    &::after {
+      transform: scale(1, 1);
+      transform-origin: 0 50% 0;
+    }
+    .english {
+      opacity: 1;
+      transform: translate(0%, -100%);
+    }
+    .japanese {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
   }
 }

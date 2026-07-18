@@ -9,7 +9,7 @@
 
   &-body {
     @include FontStyle(l);
-    @include Flex(center, center, 1em);
+    @include Flex(center, center, 0);
     padding: 0.5em 0.5em 0.5em 1.5em;
     color: color(text, base);
     border: 2px solid color(text, base);
@@ -42,6 +42,7 @@
     @include FontFamily(sub);
     @include FontStyle(x2l);
     display: inline-block;
+    padding-right: 0.75em;
     line-height: 1;
     letter-spacing: 0.02em;
     transition: transform 0.2s ease-in-out;

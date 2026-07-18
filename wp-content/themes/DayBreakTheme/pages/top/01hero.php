@@ -32,7 +32,7 @@ $hero_images = [
           <?php
           C_Elements('TextLoop', [
             'text' => ['世界へ。', '沖縄から、'],
-            'speed' => 100,
+            'speed' => 80,
             'class' => ['is-jp'],
           ]);
           ?>
