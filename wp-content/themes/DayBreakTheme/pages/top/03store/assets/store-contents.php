@@ -23,7 +23,7 @@
       <dd class="p-top-store-contents-detail-contents-value">
         <?php
         C_Elements('DecorationCounter', [
-          'value' => 99,
+          'value' => 8,
           'unit'  => '店舗',
           'once'     => false,
           'digits' => 2,   // 00 から始まり 01,02...99
@@ -36,7 +36,7 @@
       <dd class="p-top-store-contents-detail-contents-value">
         <?php
         C_Elements('DecorationCounter', [
-          'value' => 5,
+          'value' => 99,
           'unit'  => '店舗',
           'once'     => false,
           'digits' => 2,   // 00 から始まり 01,02...99

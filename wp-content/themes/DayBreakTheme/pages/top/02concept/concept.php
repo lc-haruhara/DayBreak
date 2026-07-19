@@ -74,12 +74,12 @@
   <div class="p-top-concept-contents-background">
     <div class="p-top-concept-contents-background-item" data-js-scroll-target="once" data-js-parallax="translateY:0->-60" data-scrub="0.03">
       <div class="p-top-concept-contents-background-item-body" data-js-parallax="opacity:0->1">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/hero-image1.jpg'); ?>" alt="Concept Image">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/top-concept-image2.jpg'); ?>" alt="Concept Image">
       </div>
     </div>
     <div class="p-top-concept-contents-background-item" data-js-scroll-target="once" data-js-parallax="translateY:0->-30" data-scrub="0.015">
       <div class="p-top-concept-contents-background-item-body" data-js-parallax="opacity:0->1">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/hero-image2.jpg'); ?>" alt="Concept Image">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/top-concept-image1.jpg'); ?>" alt="Concept Image">
       </div>
     </div>
     <!-- <div class="p-top-concept-contents-background-item" data-js-scroll-target="once" data-js-parallax="translateY:0->-100" data-scrub="0.03">
