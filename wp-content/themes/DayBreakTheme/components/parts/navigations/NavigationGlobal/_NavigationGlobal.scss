@@ -35,6 +35,10 @@
   width: 55%;
   @include Flex(right, center, 0.5rem);
 
+  @include Breakpoint(inch15) {
+    width: 80%;
+  }
+
   .item {
     @include FlexItem(7);
     position: relative;
