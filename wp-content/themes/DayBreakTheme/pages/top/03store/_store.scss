@@ -1,0 +1,13 @@
+@charset "utf-8";
+@use "foundation/index" as *;
+
+.p-top-store {
+  @include ContentsPadding(xl, m);
+  position: relative;
+
+  &-body {
+    @include ContentsSize(l);
+    position: relative;
+    z-index: 2;
+  }
+}

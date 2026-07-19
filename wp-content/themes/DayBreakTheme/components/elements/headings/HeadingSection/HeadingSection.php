@@ -8,6 +8,7 @@ $en    = trim($args['en'] ?? '');
 $ja    = trim($args['ja'] ?? '');
 $tag   = $args['tag'] ?? 'h2';
 $class = $args['class'] ?? '';
+$align = $args['align'] ?? '';
 
 /* ==========================================================
    タグのホワイトリスト検証
@@ -24,6 +25,12 @@ if (!in_array($tag, $allowed_tags, true)) {
 ========================================================== */
 
 $classes = ['c-heading-section'];
+
+$allowed_aligns = ['left', 'right', 'center'];
+
+if (in_array($align, $allowed_aligns, true)) {
+  $classes[] = '_align-' . $align;
+}
 
 if (is_array($class)) {
   foreach ($class as $c) {

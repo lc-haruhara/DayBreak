@@ -5,7 +5,12 @@
 //
 // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .c-heading-section {
-  display: inline-block;
+  width: 100%;
+  @include Flex(left, top);
+
+  &-body {
+    display: inline-block;
+  }
 
   &-en {
     // @include FontFamily(sub);
@@ -29,5 +34,18 @@
       content: "";
       background: #000;
     }
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Align
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &._align-left {
+    justify-content: flex-start;
+  }
+  &._align-center {
+    justify-content: center;
+  }
+  ._align-right {
+    justify-content: flex-end;
   }
 }
