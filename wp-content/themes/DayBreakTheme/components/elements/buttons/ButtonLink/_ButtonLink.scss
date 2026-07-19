@@ -10,16 +10,34 @@
   &-body {
     @include FontStyle(l);
     @include Flex(center, center, 0);
+    position: relative;
     padding: 0.5em 0.5em 0.5em 1.5em;
+    overflow: clip;
     color: color(text, base);
     border: 2px solid color(text, base);
     border-radius: 50px;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      aspect-ratio: 1/1;
+      margin: auto;
+      content: "";
+      @include Gradient;
+      border-radius: 100%;
+      transform: scale(0);
+      transition: 0.25s ease-in-out;
+    }
   }
 
   &-icon {
     position: relative;
+    z-index: 10;
     display: block;
-    width: 2em;
+    width: 1.5em;
     aspect-ratio: 1/1;
     background: color(text, base);
     border-radius: 100%;
@@ -35,12 +53,13 @@
 
   &-text {
     position: relative;
+    z-index: 10;
     overflow: clip;
   }
 
   &-text-en {
     @include FontFamily(sub);
-    @include FontStyle(x2l);
+    @include FontStyle(xl);
     display: inline-block;
     padding-right: 0.75em;
     line-height: 1;
@@ -49,16 +68,17 @@
   }
 
   &-text-jp {
-    @include FontStyle(m);
+    @include FontStyle(xs);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     padding-top: 0.05em;
     font-weight: 700;
+    color: #fff;
     white-space: nowrap;
-    transform: translateY(100%);
-    transition: transform 0.2s ease-in-out;
+    transform: translateY(110%);
+    transition: 0.2s ease-in-out;
   }
 
   &:disabled {
@@ -88,10 +108,14 @@
 //
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .c-btn-link-body:hover {
+  &::after {
+    transform: scale(2);
+  }
   .c-btn-link-text-en {
-    transform: translateY(-100%);
+    transform: translateY(-120%);
   }
   .c-btn-link-text-jp {
-    transform: translateY(0);
+    color: #fff;
+    transform: translateY(10%);
   }
 }

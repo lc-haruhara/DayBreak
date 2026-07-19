@@ -1,0 +1,33 @@
+@use "foundation/index" as *;
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+//	🍔 HeadingSection
+//
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-heading-section {
+  display: inline-block;
+
+  &-en {
+    // @include FontFamily(sub);
+    // font-size: 4vmax;
+    @include FontStyle(x5l);
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    text-box: trim-both cap alphabetic;
+  }
+
+  &-ja {
+    margin-top: 1rem;
+    @include FontStyle(m);
+    @include Flex(right, center, 1rem);
+    font-weight: 700;
+    &::before {
+      flex: 1;
+      height: 2px;
+      content: "";
+      background: #000;
+    }
+  }
+}

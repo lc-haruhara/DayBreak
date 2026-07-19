@@ -8,10 +8,13 @@ import './loading-top-only.js';
 // import './loading.js';
 
 //Utility
-import './scroll-target.js';
+import { initScrollTarget } from './scroll-target.js';
+initScrollTarget();
 
 //Pages
 import './hero-slider.js';
+import './hero-concept-fade.js';
+import './lottie-logo.js';
 import './single.js';
 
 //Styles

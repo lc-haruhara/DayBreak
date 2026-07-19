@@ -34,7 +34,6 @@
 .c-navigation-global-list {
   width: 55%;
   @include Flex(right, center, 0.5rem);
-  background: #fff;
 
   .item {
     @include FlexItem(7);
@@ -48,7 +47,7 @@
       height: 2px;
       pointer-events: none;
       content: "";
-      background: color(text);
+      @include Gradient;
       transform: scale(0, 1);
       transform-origin: 100% 50% 0;
       transition: transform 0.35s ease-in-out;
@@ -66,6 +65,7 @@
     font-weight: 700;
     color: color(text);
     text-align: center;
+    @include FontStyle(xs);
 
     span {
       display: block;
@@ -79,7 +79,7 @@
     }
 
     .japanese {
-      @include FontStyle(s);
+      @include FontStyle(xs);
       position: absolute;
       top: 50%;
       left: 50%;
@@ -101,7 +101,7 @@
     }
     .english {
       opacity: 1;
-      transform: translate(0%, -100%);
+      transform: translate(0%, -105%);
     }
     .japanese {
       opacity: 1;

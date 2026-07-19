@@ -23,7 +23,7 @@
 //
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 @mixin BaseFontSize {
-  font-size: 16px;
+  font-size: 20px;
 
   @include Breakpoint(inch15) {
   }

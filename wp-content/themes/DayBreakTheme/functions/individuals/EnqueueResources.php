@@ -41,6 +41,15 @@ add_action('wp_enqueue_scripts', function () {
     null
   );
 
+  // Lottie（lottie-web / MIT ライセンス / Concept セクションのロゴアニメーションで使用）
+  wp_enqueue_script(
+    'lottie-web',
+    'https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js',
+    [],
+    null,
+    true
+  );
+
   // GSAP
   // wp_enqueue_script(
   //   'gsap',

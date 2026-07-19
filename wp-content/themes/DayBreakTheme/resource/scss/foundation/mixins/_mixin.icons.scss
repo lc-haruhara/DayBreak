@@ -15,7 +15,7 @@
 //  @include IconMtStyle($fontSize: 1.5rem, $fill: 1);
 //  @include IconMtStyle($fontSize: 1.5rem, $fill: 1, $weight: 700);
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-@mixin IconMtStyle($fontSize: 1.25em, $fill: 0, $weight: 400) {
+@mixin IconMtStyle($fontSize: 1em, $fill: 0, $weight: 400) {
   display: inline-block;
   // Material Symbols (Outlined) - use ligatures (e.g. "chevron_forward")
   font-family: "Material Symbols Outlined";

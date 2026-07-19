@@ -78,6 +78,23 @@ $colors: (
   ),
 );
 
+@mixin Gradient($type: background) {
+  background: #eb0f60;
+  background: linear-gradient(
+    90deg,
+    rgb(253 76 69) 0%,
+    #f36723 51%,
+    rgb(253 146 14) 100%
+  );
+
+  @if $type ==text {
+    color: transparent; // フォールバック
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 // ========================================
 // Color Function
 // ========================================

@@ -1,0 +1,41 @@
+@charset "utf-8";
+@use "foundation/index" as *;
+
+.p-top-concept {
+  @include ContentsPadding(section, m);
+
+  &-body {
+    @include ContentsSize(l);
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Contents
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-top-concept-contents {
+  margin-top: 4rem;
+  @include Flex(between, center, 4rem);
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Description
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-description {
+    width: 60%;
+    &-text {
+      line-height: 2;
+    }
+  }
+
+  .c-btn-link {
+    margin-top: 4rem;
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Image
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-image {
+    flex: 1;
+  }
+}
