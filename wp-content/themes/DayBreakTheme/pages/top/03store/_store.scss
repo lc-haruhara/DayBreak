@@ -37,8 +37,14 @@
 //
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .p-top-store-contents-detail {
-  @include ContentsPadding(xl, none);
+  @include ContentsPadding(xl, none, l);
   flex: 1;
+  &-contents {
+    margin-bottom: 4rem;
+    &-item {
+      @include Flex(left, bottom, 2rem);
+    }
+  }
 }
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

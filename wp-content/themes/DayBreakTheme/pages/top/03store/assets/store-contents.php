@@ -17,6 +17,35 @@
   ]);
   ?>
 
+  <dl class="p-top-store-contents-detail-contents">
+    <div class="p-top-store-contents-detail-contents-item">
+      <dt class="p-top-store-contents-detail-contents-title">国内店舗数</dt>
+      <dd class="p-top-store-contents-detail-contents-value">
+        <?php
+        C_Elements('DecorationCounter', [
+          'value' => 99,
+          'unit'  => '店舗',
+          'once'     => false,
+          'digits' => 2,   // 00 から始まり 01,02...99
+        ]);
+        ?>
+      </dd>
+    </div>
+    <div class="p-top-store-contents-detail-contents-item">
+      <dt class="p-top-store-contents-detail-contents-title">海外店舗数</dt>
+      <dd class="p-top-store-contents-detail-contents-value">
+        <?php
+        C_Elements('DecorationCounter', [
+          'value' => 5,
+          'unit'  => '店舗',
+          'once'     => false,
+          'digits' => 2,   // 00 から始まり 01,02...99
+        ]);
+        ?>
+      </dd>
+    </div>
+  </dl>
+
   <!--::::::::::::::::::::::::::::::::::::::::::::
     ButtonLink
   ::::::::::::::::::::::::::::::::::::::::::::-->

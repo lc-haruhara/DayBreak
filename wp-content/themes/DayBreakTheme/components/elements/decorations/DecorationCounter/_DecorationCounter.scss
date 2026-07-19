@@ -1,0 +1,81 @@
+@use "foundation/index" as *;
+
+.c-deco-counter {
+  // 数字カラム 1 コマの高さ。数字が上下で切れる場合はここを上げる
+  --counter-cell: 1.1em;
+  @include Flex(left, bottom, 0.25em);
+
+  &-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    // カウント中に桁幅が揺れないようにする
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    letter-spacing: 0.02em;
+
+    @include Breakpoint(mobile) {
+      font-size: 6rem;
+    }
+
+    // JS がカラムを組み立てた後だけ適用される
+    &.is-columns {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    // アニメ中だけレイヤー化する (停止中は GPU メモリを手放す)
+    &.is-animating .c-deco-counter-digit-strip {
+      will-change: transform;
+    }
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Digit
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-digit {
+    display: block;
+    height: var(--counter-cell);
+    overflow: hidden;
+    &:nth-of-type(2) {
+      margin-left: -0.1em;
+    }
+
+    // 先頭ゼロ。幅は保持したまま見えなくする
+    &.is-blank {
+      opacity: 0;
+    }
+
+    // transition は付けないこと。9→0 の折り返しが逆再生されてしまう
+    &-strip {
+      display: block;
+    }
+
+    &-cell {
+      display: block;
+      height: var(--counter-cell);
+      line-height: var(--counter-cell);
+      text-align: center;
+      transform: translate(0%, 8%);
+    }
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Separator
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-sep {
+    display: block;
+    height: var(--counter-cell);
+    line-height: var(--counter-cell);
+
+    &.is-blank {
+      opacity: 0;
+    }
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Unit
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-unit {
+    font-weight: 700;
+  }
+}

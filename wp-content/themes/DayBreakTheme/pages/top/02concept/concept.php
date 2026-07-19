@@ -51,7 +51,7 @@
       <!--::::::::::::::::::::::::::::::::::::::::::::
         Image
       ::::::::::::::::::::::::::::::::::::::::::::-->
-      <div class="p-top-concept-contents-image" data-js-scroll-target="once" data-js-parallax="translateY:-50->50">
+      <div class="p-top-concept-contents-image" data-js-scroll-target="once" data-js-parallax="translateY:-50->20" data-scrub="0.015">
         <!--::::::::::::::::::::::::::::::::::::::::::::
           Logo
         ::::::::::::::::::::::::::::::::::::::::::::-->

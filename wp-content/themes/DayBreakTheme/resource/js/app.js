@@ -12,6 +12,8 @@ import { initScrollTarget } from './scroll-target.js';
 initScrollTarget();
 import { initParallax } from './parallax.js';
 initParallax();
+import { initCountUp } from './count-up.js';
+initCountUp();
 
 //Pages
 import './hero-slider.js';
