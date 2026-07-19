@@ -26,6 +26,7 @@
   font-size: 20px;
 
   @include Breakpoint(inch15) {
+    font-size: 18px;
   }
 
   @include Breakpoint(inch13) {

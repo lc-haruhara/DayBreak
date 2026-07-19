@@ -2,8 +2,10 @@
 @use "foundation/index" as *;
 
 .p-top-concept {
-  @include ContentsPadding(section, m, xl);
+  @include ContentsPadding(section, m, section);
   position: relative;
+  padding-top: 16rem;
+  padding-bottom: 16rem;
 
   &-body {
     @include ContentsSize(l);
@@ -18,7 +20,7 @@
 //
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .p-top-concept-contents {
-  margin-top: 4rem;
+  margin-top: 2rem;
   @include Flex(between, center, 2rem);
 
   //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -67,9 +69,9 @@
   &-item {
     position: absolute;
     width: 35%;
-    aspect-ratio: 10/10;
     overflow: clip;
-    border-radius: 100%;
+    background: #fff;
+    border-radius: 0.5rem;
     &-body {
       height: 100%;
     }
@@ -78,15 +80,27 @@
       object-fit: cover;
     }
     &:nth-of-type(1) {
-      top: 30%;
-      right: 2rem;
-      width: 22%;
+      top: 33%;
+      right: -2rem;
+      width: 25%;
     }
     &:nth-of-type(2) {
       right: 0%;
-      bottom: 7%;
+      bottom: 10%;
       left: 0%;
-      width: 15%;
+      width: 20%;
+      margin: auto;
+    }
+    &:nth-of-type(3) {
+      bottom: -9%;
+      left: 0%;
+      width: 20%;
+      margin: auto;
+    }
+    &:nth-of-type(4) {
+      top: 0;
+      left: -2rem;
+      width: 25%;
       margin: auto;
     }
   }

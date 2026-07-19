@@ -8,7 +8,7 @@
       <a href="<?= esc_url($logo_link); ?>" class="">
         <?php
         C_Elements('LogoCommon', [
-          'key' => 'value',
+          'name' => 'main',
         ]);
         ?>
       </a>

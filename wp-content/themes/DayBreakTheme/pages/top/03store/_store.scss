@@ -2,12 +2,94 @@
 @use "foundation/index" as *;
 
 .p-top-store {
-  @include ContentsPadding(xl, m);
+  @include ContentsPadding(none, m);
   position: relative;
+
+  &-inner {
+    position: relative;
+    overflow: clip;
+    background: #f7f6f6;
+    border-radius: 2rem;
+    @include ContentsPadding(none, m, none);
+  }
 
   &-body {
     @include ContentsSize(l);
     position: relative;
     z-index: 2;
   }
+
+  &-contents {
+    @include Flex(left, stretch, 4rem);
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Heading
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  .c-heading-section {
+    margin-bottom: 2rem;
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Detail
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-top-store-contents-detail {
+  @include ContentsPadding(xl, none);
+  flex: 1;
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Images
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-top-store-contents-images {
+  width: 55%;
+  @include Flex(left, stretch, 2rem);
+  transform: rotate(10deg);
+
+  .swiper {
+    overflow: visible;
+  }
+
+  &-group {
+    flex: 1;
+    height: 65svh;
+    overflow: hidden;
+
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+  }
+
+  // スライドの高さは slidesPerView から Swiper が算出するのでここでは指定しない
+  &-item {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 0.5rem;
+
+    .c-logo-common {
+      width: 80%;
+    }
+  }
+}
+
+///::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 Background
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-top-store-contents-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 80%;
+  opacity: 0.08;
+  transform: translate(-15%, 0);
 }

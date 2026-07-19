@@ -1,0 +1,20 @@
+@use "foundation/index" as *;
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 CommonStyle
+//
+// inline モード（svg 展開）と img モードのどちらでも
+// 親要素の幅に追従させる。
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.c-logo-common {
+  display: block;
+
+  svg,
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
