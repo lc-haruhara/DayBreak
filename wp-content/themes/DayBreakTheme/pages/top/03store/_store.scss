@@ -4,6 +4,7 @@
 .p-top-store {
   @include ContentsPadding(none, m);
   position: relative;
+  z-index: 1;
 
   &-inner {
     position: relative;

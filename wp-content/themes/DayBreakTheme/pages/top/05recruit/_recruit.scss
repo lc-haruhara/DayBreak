@@ -1,0 +1,50 @@
+@charset "utf-8";
+@use "foundation/index" as *;
+
+.p-top-recruit {
+  @include ContentsPadding(section, m, section, m);
+  position: relative;
+  z-index: 0;
+  &-body {
+    @include ContentsSize(l);
+    position: relative;
+    z-index: 2;
+  }
+  .c-heading-section {
+    margin-bottom: 4rem;
+  }
+  .p-top-recruit-links {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  .p-top-recruit-description {
+    @include ContentsSize(s);
+    margin-bottom: 4rem;
+    &-heading {
+      @include FontStyle(xl);
+      margin-bottom: 1rem;
+      font-feature-settings: "palt";
+    }
+    &-text {
+      line-height: 2;
+    }
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //
+  // 🍔 Background
+  //
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-background {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.03;
+    filter: grayscale(100%);
+    &-body {
+    }
+  }
+}

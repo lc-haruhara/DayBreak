@@ -1,0 +1,61 @@
+@use "foundation/index" as *;
+
+.c-list-numbers {
+  @include Flex(space-between, top, 2rem);
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100vw;
+    height: 60%;
+    margin-left: calc(50% - 50vw);
+    content: "";
+    background: #000;
+    transform: translateY(-50%);
+  }
+
+  &-item {
+    position: relative;
+    z-index: 10;
+    background: #f7f6f6;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    @include FlexItem(4, 2rem);
+    @include ContentsPadding(m, m);
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Icon
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-item-icon {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    width: 70%;
+    aspect-ratio: 1/1;
+    margin: auto;
+    margin-bottom: 1rem;
+    background: #fff;
+    border: 1px solid;
+    border-radius: 100%;
+    &-body {
+      width: 55%;
+    }
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Title
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-item-title {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // 🍟 Value
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  &-item-value {
+    @include Flex(center, top);
+  }
+}

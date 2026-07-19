@@ -26,10 +26,25 @@ if (targets.length && window.lottie) {
     // is-on を監視するトリガー要素（scroll-target が付いた祖先 or 自身）
     const trigger = el.closest('[data-js-scroll-target]') || el;
 
+    // data-lottie-reverse あり: is-on 解除で逆再生する（なしは従来どおり pause）
+    const isReverse = 'lottieReverse' in el.dataset;
+
     const sync = () => {
       if (trigger.classList.contains(ACTIVE_CLASS)) {
-        // 入るたびに最初から再生
-        anim.goToAndPlay(0, true);
+        if (isReverse) {
+          // 逆再生の途中で戻ってきた場合も、現在フレームから順再生して繋げる
+          anim.setDirection(1);
+          anim.play();
+        } else {
+          // 入るたびに最初から再生
+          anim.goToAndPlay(0, true);
+        }
+      } else if (isReverse) {
+        // 現在フレームから 0 へ巻き戻す（0 到達で自動停止）
+        // 先頭で待機中（未再生・巻き戻し完了後）は何もしない
+        anim.setDirection(-1);
+        if (anim.currentFrame > 0) anim.play();
+        else anim.pause();
       } else {
         anim.pause();
       }

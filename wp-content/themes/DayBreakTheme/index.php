@@ -6,6 +6,7 @@ $sections = [
   'pages/top/01hero/hero.php',
   'pages/top/02concept/concept.php',
   'pages/top/03store/store.php',
+  'pages/top/05recruit/recruit.php',
 ];
 
 require get_template_directory() . '/layout.php';

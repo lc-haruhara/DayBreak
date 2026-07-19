@@ -22,7 +22,7 @@
   &-text {
     display: block;
     padding-left: 0.15em;
-    font-size: 10vmax;
+    font-size: 18vmax;
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
@@ -59,7 +59,7 @@
 
   &.is-jp {
     .c-text-loop-text {
-      font-size: 7.5vmax;
+      font-size: 14.5vmax;
       font-feature-settings: "palt";
     }
   }
