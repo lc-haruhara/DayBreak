@@ -3,9 +3,12 @@
 
 .p-top-concept {
   @include ContentsPadding(section, m);
+  position: relative;
 
   &-body {
     @include ContentsSize(l);
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -16,14 +19,15 @@
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .p-top-concept-contents {
   margin-top: 4rem;
-  @include Flex(between, center, 4rem);
+  @include Flex(between, center, 2rem);
 
   //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   // 🍟 Description
   //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   &-description {
-    width: 60%;
+    width: 50%;
     &-text {
+      width: 80%;
       line-height: 2;
     }
   }
@@ -36,6 +40,54 @@
   // 🍟 Image
   //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   &-image {
+    @include ContentsPadding(l, m);
+    position: relative;
     flex: 1;
+    background: #fff;
+    border-radius: 0.5rem;
+    &-logo {
+      width: 63%;
+      margin: auto;
+    }
+  }
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+// 🍔 BackgroundImage
+//
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.p-top-concept-contents-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  &-item {
+    position: absolute;
+    width: 35%;
+    aspect-ratio: 10/10;
+    overflow: clip;
+    border-radius: 100%;
+    &-body {
+      height: 100%;
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    &:nth-of-type(1) {
+      top: 30%;
+      right: 2rem;
+      width: 22%;
+    }
+    &:nth-of-type(2) {
+      right: 0%;
+      bottom: 7%;
+      left: 0%;
+      width: 15%;
+      margin: auto;
+    }
   }
 }

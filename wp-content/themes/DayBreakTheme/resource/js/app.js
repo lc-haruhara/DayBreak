@@ -10,6 +10,8 @@ import './loading-top-only.js';
 //Utility
 import { initScrollTarget } from './scroll-target.js';
 initScrollTarget();
+import { initParallax } from './parallax.js';
+initParallax();
 
 //Pages
 import './hero-slider.js';

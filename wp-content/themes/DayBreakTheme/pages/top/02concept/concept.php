@@ -52,6 +52,9 @@
         Image
       ::::::::::::::::::::::::::::::::::::::::::::-->
       <div class="p-top-concept-contents-image" data-js-scroll-target="once">
+        <!--::::::::::::::::::::::::::::::::::::::::::::
+          Logo
+        ::::::::::::::::::::::::::::::::::::::::::::-->
         <div
           class="p-top-concept-contents-image-logo"
           data-js-lottie
@@ -62,4 +65,23 @@
     </div>
 
   </div>
+
+  <!--::::::::::::::::::::::::::::::::::::::::::::
+
+    BackgroundImage
+
+  ::::::::::::::::::::::::::::::::::::::::::::-->
+  <div class="p-top-concept-contents-background">
+    <div class="p-top-concept-contents-background-item" data-js-scroll-target="once" data-js-parallax="translateY:0->-60 opacity:0->1" data-scrub="0.05">
+      <div class="p-top-concept-contents-background-item-body">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/hero-image1.jpg'); ?>" alt="Concept Image">
+      </div>
+    </div>
+    <div class="p-top-concept-contents-background-item" data-js-scroll-target="once" data-js-parallax="translateY:0->-30 opacity:0->1" data-scrub="0.05">
+      <div class="p-top-concept-contents-background-item-body">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/hero-image2.jpg'); ?>" alt="Concept Image">
+      </div>
+    </div>
+  </div>
+
 </section>
